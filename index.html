@@ -37,10 +37,10 @@
             Saving the world. Shaping the world.
           </p>
           <div class="flex gap-[20px] text-white">
-            <i class="fa fa-twitter" aria-hidden="true"></i>
-            <i class="fa fa-facebook" aria-hidden="true"></i>
-            <i class="fa fa-dribbble" aria-hidden="true"></i>
-            <i class="fa fa-instagram" aria-hidden="true"></i>
+            <i class="fa fa-twitter cursor-pointer" aria-hidden="true"></i>
+            <i class="fa fa-facebook cursor-pointer" aria-hidden="true"></i>
+            <i class="fa fa-dribbble cursor-pointer" aria-hidden="true"></i>
+            <i class="fa fa-instagram cursor-pointer" aria-hidden="true"></i>
           </div>
         </div>
       </div>
@@ -157,23 +157,23 @@
           moment, and found herself walking in at the front-door again.
         </p>
       </div>
-      <form class="flex flex-col gap-[26px]">
-        <div class="flex gap-[10px] w-full">
+      <form class="flex flex-col gap-[26px]" onsubmit="handleSubmit(event)">
+        <div class="flex gap-[10px] max-lg:flex-col w-full">
           <div class="flex flex-col gap-[10px] w-full">
-            <label for="name" class="text-[#15143966]">First Name</label>
+            <label for="FirstName" class="text-[#15143966]">First Name</label>
             <input
               type="text"
-              id="name"
-              name="name"
+              id="FirstName"
+              name="Firstname"
               class="border-[1px] border-[#15143966] rounded-[5px] p-[10px]"
             />
           </div>
           <div class="flex flex-col gap-[10px] w-full">
-            <label for="name" class="text-[#15143966]">Last Name</label>
+            <label for="LastName" class="text-[#15143966]">Last Name</label>
             <input
               type="text"
-              id="name"
-              name="name"
+              id="LastName"
+              name="Lastname"
               class="border-[1px] border-[#15143966] rounded-[5px] p-[10px]"
             />
           </div>
@@ -199,6 +199,37 @@
         <button
           type="submit"
           class="bg-[#2F1893] cursor-pointer h-[45px] text-white rounded hover:bg-[#1E0E62] transition-colors duration-300">Submit</button>
+        </form>
+    </section>
+
+    <!---Newsletter Section-->
+    <section class="bg-[#2F1893]">
+      <section class="min-xl:px-[315px] pb-[100px] min-md:px-[200px] py-[70px] min-sm:px-[100px] px-[70px] flex flex-col gap-[60px]">
+        <div class="flex flex-col gap-[26px]">
+          <p class="text-[42px] max-sm:text-3xl leading-[52px] font-bold text-white">
+            Subscribe to our Newsletter
+          </p>
+          <p class="text-white">
+            Stay updated with the latest news and special offers.
+          </p>
+        </div>
+        <form class="flex flex-col gap-[26px]" onsubmit="handleNewsletterSubmit(event)">
+          <div class="flex flex-col gap-[10px]">
+            <label for="newsletter-email" class="text-white">Email</label>
+            <input
+              type="email"
+              id="newsletter-email"
+              name="newsletter-email"
+              class="border-[1px] border-[#fff] rounded-[5px] p-[10px] text-white"
+              required
+            />
+          </div>
+          <button
+            type="submit"
+            class="bg-[#fff] cursor-pointer h-[45px] text-black rounded hover:bg-yellow-50 transition-colors duration-300">Subscribe</button>
+        </form>
+      </div>
+      </section>
     </section>
     <script src="./main.js"></script>
   </body>

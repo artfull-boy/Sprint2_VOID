@@ -55,3 +55,25 @@ const carousel = {
   };
 
   carousel.init();
+
+  const firstName = document.getElementById('FirstName');
+  const lastName = document.getElementById('LastName');
+  const email = document.getElementById('email');
+  const message = document.getElementById('message');
+  const handleSubmit = (e) => {
+  e.preventDefault();
+    if (firstName.value === '' || lastName.value === '' || email.value === '' || message.value === '') {
+      alert('Please fill out all fields');
+      return;
+    }
+    else {
+      console.log('First Name: ',firstName.value);
+      console.log('Last Name: ',lastName.value);
+      console.log('Email: ',email.value);
+      console.log('Message: ',message.value);
+      firstName.value = '';
+      lastName.value = '';
+      email.value = '';
+      message.value = '';
+    }
+  }

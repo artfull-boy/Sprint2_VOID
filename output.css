@@ -7,6 +7,8 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
       "Liberation Mono", "Courier New", monospace;
     --color-red-500: oklch(0.637 0.237 25.331);
+    --color-yellow-50: oklch(0.987 0.026 102.212);
+    --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
     --text-3xl: 1.875rem;
@@ -351,9 +353,6 @@
   .m-1 {
     margin: calc(var(--spacing) * 1);
   }
-  .m-5 {
-    margin: calc(var(--spacing) * 5);
-  }
   .mr-\[18px\] {
     margin-right: 18px;
   }
@@ -447,20 +446,8 @@
   .h-\[14px\] {
     height: 14px;
   }
-  .h-\[40px\] {
-    height: 40px;
-  }
   .h-\[45px\] {
     height: 45px;
-  }
-  .h-\[50px\] {
-    height: 50px;
-  }
-  .h-\[80px\] {
-    height: 80px;
-  }
-  .h-\[500px\] {
-    height: 500px;
   }
   .h-auto {
     height: auto;
@@ -1136,6 +1123,9 @@
   .border-\[\#15143966\] {
     border-color: #15143966;
   }
+  .border-\[\#fff\] {
+    border-color: #fff;
+  }
   .bg-\(--my_variable\) {
     background-color: var(--my_variable);
   }
@@ -1147,6 +1137,9 @@
   }
   .bg-\[\#0088cc\] {
     background-color: #0088cc;
+  }
+  .bg-\[\#fff\] {
+    background-color: #fff;
   }
   .bg-\[color\:var\(--my-color\)\] {
     background-color: var(--my-color);
@@ -1519,6 +1512,9 @@
   }
   .text-\[\#ffffffd4\] {
     color: #ffffffd4;
+  }
+  .text-black {
+    color: var(--color-black);
   }
   .text-white {
     color: var(--color-white);
@@ -1977,9 +1973,21 @@
       }
     }
   }
+  .hover\:bg-yellow-50 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-yellow-50);
+      }
+    }
+  }
   .max-lg\:h-\[400px\] {
     @media (width < 64rem) {
       height: 400px;
+    }
+  }
+  .max-lg\:flex-col {
+    @media (width < 64rem) {
+      flex-direction: column;
     }
   }
   .max-md\:h-\[300px\] {
@@ -2029,11 +2037,6 @@
       height: 500px;
     }
   }
-  .min-xl\:h-\[500px\] {
-    @media (width >= 80rem) {
-      height: 500px;
-    }
-  }
   .min-xl\:px-\[315px\] {
     @media (width >= 80rem) {
       padding-inline: 315px;
@@ -2072,12 +2075,13 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 10px;
 }
 .carousel-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
+  background: #2F1893;
   color: white;
   padding: 1rem;
   cursor: pointer;
@@ -2099,10 +2103,10 @@
   gap: 10px;
 }
 .dot {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.4);
   cursor: pointer;
 }
 .dot.active {
