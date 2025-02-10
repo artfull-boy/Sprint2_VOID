@@ -1333,6 +1333,9 @@
   .p-\[10px\] {
     padding: 10px;
   }
+  .px-\[50px\] {
+    padding-inline: 50px;
+  }
   .px-\[70px\] {
     padding-inline: 70px;
   }
