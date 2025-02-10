@@ -2090,6 +2090,9 @@
     }
   }
 }
+* {
+  font-family: "DM Sans", serif;
+}
 .carousel-container {
   position: relative;
   margin: 0 auto;
