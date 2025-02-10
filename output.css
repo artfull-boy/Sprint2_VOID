@@ -11,6 +11,8 @@
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
+    --text-xl: 1.25rem;
+    --text-xl--line-height: calc(1.75 / 1.25);
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
     --font-weight-medium: 500;
@@ -1156,6 +1158,9 @@
   .bg-red-500\/\[50\%\] {
     background-color: color-mix(in oklab, var(--color-red-500) 50%, transparent);
   }
+  .bg-white {
+    background-color: var(--color-white);
+  }
   .-bg-conic {
     --tw-gradient-position: in oklab;
     background-image: conic-gradient(var(--tw-gradient-stops));
@@ -1331,6 +1336,9 @@
   .px-\[70px\] {
     padding-inline: 70px;
   }
+  .py-\[20px\] {
+    padding-block: 20px;
+  }
   .py-\[70px\] {
     padding-block: 70px;
   }
@@ -1387,6 +1395,10 @@
   }
   .align-top {
     vertical-align: top;
+  }
+  .text-xl {
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
   }
   .text-\[14px\] {
     font-size: 14px;
@@ -2001,11 +2013,6 @@
       height: 70px;
     }
   }
-  .max-sm\:h-\[200px\] {
-    @media (width < 40rem) {
-      height: 200px;
-    }
-  }
   .max-sm\:text-3xl {
     @media (width < 40rem) {
       font-size: var(--text-3xl);
@@ -2042,6 +2049,11 @@
       padding-inline: 315px;
     }
   }
+  .min-xl\:py-\[30px\] {
+    @media (width >= 80rem) {
+      padding-block: 30px;
+    }
+  }
   .min-xl\:py-\[100px\] {
     @media (width >= 80rem) {
       padding-block: 100px;
@@ -2050,6 +2062,31 @@
   .min-xl\:pt-\[100px\] {
     @media (width >= 80rem) {
       padding-top: 100px;
+    }
+  }
+  .dark\:border-\[\#ffffffb3\] {
+    &:where([data-theme=dark], [data-theme=dark] *) {
+      border-color: #ffffffb3;
+    }
+  }
+  .dark\:bg-\[\#1E1E1E\] {
+    &:where([data-theme=dark], [data-theme=dark] *) {
+      background-color: #1E1E1E;
+    }
+  }
+  .dark\:bg-black {
+    &:where([data-theme=dark], [data-theme=dark] *) {
+      background-color: var(--color-black);
+    }
+  }
+  .dark\:text-\[\#ffffffb3\] {
+    &:where([data-theme=dark], [data-theme=dark] *) {
+      color: #ffffffb3;
+    }
+  }
+  .dark\:text-white {
+    &:where([data-theme=dark], [data-theme=dark] *) {
+      color: var(--color-white);
     }
   }
 }

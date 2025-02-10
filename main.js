@@ -77,3 +77,15 @@ const carousel = {
       message.value = '';
     }
   }
+  const htmlElemt = document.documentElement;
+
+  const handleClick = (e) => {
+    e.srcElement.classList.toggle('fa-toggle-off');
+    e.srcElement.classList.toggle('fa-toggle-on');
+    if (htmlElemt.getAttribute("data-theme")=='dark') {
+      htmlElemt.setAttribute("data-theme","light");
+    } else {
+      htmlElemt.setAttribute("data-theme","dark");
+    } 
+
+  }
