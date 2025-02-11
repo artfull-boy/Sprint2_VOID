@@ -42,8 +42,12 @@
       <p id="hero-subtitle" class="text-[14px] text-white">Splashproof Design</p>
     </div>
     <div class="flex gap-[24px] items-center">
-      <img src="./images/Userpic.png" alt="hero-image" width="100px" height="100px"
-        class="max-sm:size-[70px] rounded-full" loading="lazy"/>
+      <picture>
+        <source srcset="./images/Userpic@2x.png" media="(min-width: 1024px)" />
+        <source srcset="./images/Userpic.png" media="(min-width: 650px)" />
+        <img src="./images/Userpic.png" alt="hero-image" width="100px" height="100px"
+          class="max-sm:size-[70px] rounded-full" loading="lazy"/>
+      </picture>
       <div class="flex flex-col gap-[5px] ">
         <p id="hero-author" class="uppercase text-[14px] leading-[26px] text-white">
           Samuel Audlev
@@ -157,7 +161,7 @@
 
   <!---Form Section-->
   <section
-    class="min-xl:px-[315px] pb-[100px] min-md:px-[200px] py-[70px] min-sm:px-[100px] px-[30px] flex flex-col gap-[60px] dark:bg-black">
+    class="min-xl:px-[315px] pb-[100px] min-md:px-[200px] py-[70px] min-sm:px-[100px] px-[30px] flex flex-col gap-[60px] dark:bg-black" id="form">
     <div class="flex flex-col gap-[26px]">
       <p id="contact-title" class="text-[42px] max-sm:text-3xl leading-[52px] font-bold text-[#1E0E62] dark:text-white">
         Contact Us
@@ -202,32 +206,43 @@
         class="bg-[#2F1893] cursor-pointer h-[45px] text-white rounded hover:bg-[#1E0E62] transition-colors duration-300">Submit</button>
     </form>
   </section>
-
-  <!---Newsletter Section-->
-  <section class="bg-[#2F1893]">
-    <section
-      class="min-xl:px-[315px] pb-[100px] min-md:px-[200px] py-[70px] min-sm:px-[100px] px-[30px] flex flex-col gap-[60px]">
-      <div class="flex flex-col gap-[26px]">
-        <p id="newsletter-title" class="text-[42px] max-sm:text-3xl leading-[52px] font-bold text-white">
-          Subscribe to our Newsletter
-        </p>
-        <p id="newsletter-description" class="text-white">
-          Stay updated with the latest news and special offers.
-        </p>
-      </div>
-      <form class="flex flex-col gap-[26px]" onsubmit="handleNewsletterSubmit(event)">
-        <div class="flex flex-col gap-[10px]">
-          <label id="form-field5"  for="newsletter-email" class="text-white">Email</label>
-          <input type="email" id="newsletter-email" name="newsletter-email"
-            class="border-[1px] border-[#fff] rounded-[5px] p-[10px] text-white" required />
+  
+  <section class="min-xl:px-[315px] pb-[100px] min-md:px-[200px] py-[70px] min-sm:px-[100px] px-[30px] flex flex-col gap-[60px] dark:bg-black" id="TestimonialSection" dir="ltr">
+    <div  class="relative w-full mx-auto overflow-hidden">
+      <div id="testimonial-carousel" class="flex transition-transform duration-500 ease-in-out">
+        <!-- Testimonial 1 -->
+        <div class="min-w-full p-6  rounded-lg text-center">
+          <p id="testtimonial1" class="text-gray-600 dark:text-[#fff] italic">"This service exceeded my expectations. Highly recommended!"</p>
+          <div class="mt-4 flex justify-center">
+            <img src="https://img.freepik.com/photos-gratuite/portrait-femme-blonde-souriante_23-2148316635.jpg?t=st=1739286679~exp=1739290279~hmac=088487730bf7b37cd11fb93c147569e136e0c8b5312ac34a91d992b8ebf10719&w=1480" alt="User" class="size-[60px] rounded-full object-cover">
+          </div>
+          <p class="mt-2 font-semibold dark:text-[#fff]">John Doe</p>
         </div>
-        <button type="submit" id="subscribe"
-          class="bg-[#fff] cursor-pointer h-[45px] text-black rounded hover:bg-yellow-50 transition-colors duration-300">Subscribe</button>
-      </form>
+        <!-- Testimonial 2 -->
+        <div class="min-w-full p-6 rounded-lg text-center">
+          <p id="testtimonial2" class="text-gray-600 dark:text-[#fff] italic">"Amazing experience! The team was professional and efficient."</p>
+          <div class="mt-4 flex justify-center">
+            <img src="https://img.freepik.com/photos-gratuite/tour-taille-jeune-femme-europeenne-attrayante-positive-employee-etudiant-portant-du-rouge-levres-lunettes-ovales-souriant-confiance-gardant-bras-croises-posant-isole_344912-548.jpg?t=st=1739286712~exp=1739290312~hmac=addfa96cabcafb23c59e8a9619ce2b23ecab5a3c1746a9fc8d554203c80a01bb&w=2000" alt="User" class="size-[60px] rounded-full object-cover">
+          </div>
+          <p class="mt-2 font-semibold dark:text-[#fff]">Jane Smith</p>
+        </div>
+        <!-- Testimonial 3 -->
+        <div class="min-w-full p-6 rounded-lg text-center">
+          <p id="testtimonial3" class="text-gray-600 dark:text-[#fff] italic">"A fantastic product that I will definitely use again!"</p>
+          <div class="mt-4 flex justify-center">
+            <img src="https://img.freepik.com/photos-gratuite/portrait-jeune-homme-beau-modele-souriant-vetu-vetements-gris-capuche-decontracte-posant-mur-blanc-isole_158538-6978.jpg?t=st=1739286741~exp=1739290341~hmac=fe790e7da5ff742ede8eb7338da6e8651e90f3ee3cbfeed5cf25390ebec9fd54&w=2000" alt="User" class="size-[60px] rounded-full object-cover">
+          </div>
+          <p class="mt-2 font-semibold dark:text-[#fff]">Alex Brown</p>
+        </div>
       </div>
-    </section>
+      <!-- Navigation Buttons -->
+      <button id="prev-btn" class="cursor-pointer absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-200  rounded-full size-7 hover:bg-[#2F1893] text-white transition-all duration-500 ease-in-out ">❮</button>
+      <button id="next-btn" class="cursor-pointer absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-200 rounded-full size-7 hover:bg-[#2F1893] text-white transition-all duration-500 ease-in-out ">❯</button>
+    </div>
   </section>
 
+  <!---Newsletter Section Injected using JS-->
+  <script src="./newsletter.js"></script>
   <script src="./main.js"></script>
 </body>
 
