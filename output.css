@@ -20,6 +20,7 @@
     --ease-in: cubic-bezier(0.4, 0, 1, 1);
     --ease-out: cubic-bezier(0, 0, 0.2, 1);
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --aspect-video: 16 / 9;
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
@@ -453,6 +454,9 @@
   }
   .aspect-square {
     aspect-ratio: 1 / 1;
+  }
+  .aspect-video {
+    aspect-ratio: var(--aspect-video);
   }
   .h-\[14px\] {
     height: 14px;
@@ -891,12 +895,6 @@
   }
   .justify-items-stretch {
     justify-items: stretch;
-  }
-  .gap-1 {
-    gap: calc(var(--spacing) * 1);
-  }
-  .gap-2 {
-    gap: calc(var(--spacing) * 2);
   }
   .gap-\[5px\] {
     gap: 5px;
@@ -1351,17 +1349,8 @@
   .px-\[30px\] {
     padding-inline: 30px;
   }
-  .py-2 {
-    padding-block: calc(var(--spacing) * 2);
-  }
-  .py-2\.5 {
-    padding-block: calc(var(--spacing) * 2.5);
-  }
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
-  }
-  .py-\[20px\] {
-    padding-block: 20px;
   }
   .py-\[70px\] {
     padding-block: 70px;
@@ -2075,11 +2064,6 @@
   .min-xl\:px-\[315px\] {
     @media (width >= 80rem) {
       padding-inline: 315px;
-    }
-  }
-  .min-xl\:py-\[30px\] {
-    @media (width >= 80rem) {
-      padding-block: 30px;
     }
   }
   .min-xl\:py-\[100px\] {
