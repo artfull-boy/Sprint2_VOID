@@ -1,3 +1,12 @@
+const arabic = document.getElementById('ar');
+const english = document.getElementById('en');
+const firstName = document.getElementById('FirstName');
+const lastName = document.getElementById('LastName');
+const email = document.getElementById('email');
+const message = document.getElementById('message');
+const additional_Content = document.getElementById('additional_Content');
+const showMore = document.getElementById('showMore');
+const htmlElemt = document.documentElement;
 
 const carousel = {
     currentSlide: 0,
@@ -54,20 +63,38 @@ const carousel = {
       this.updateSlides();
     }
   };
+carousel.init();
 
-  carousel.init();
-
-  const firstName = document.getElementById('FirstName');
-  const lastName = document.getElementById('LastName');
-  const email = document.getElementById('email');
-  const message = document.getElementById('message');
-  const handleSubmit = (e) => {
+const handleSubmit = (e) => {
   e.preventDefault();
     if (firstName.value === '' || lastName.value === '' || email.value === '' || message.value === '') {
-      alert('Please fill out all fields');
+      if (firstName.value === '') {
+        firstName.classList.add('border-red-500');
+        firstName.nextElementSibling.classList.remove('hidden');
+      }
+      if (lastName.value === '') {
+        lastName.classList.add('border-red-500');
+        lastName.nextElementSibling.classList.remove('hidden');
+      }
+      if (email.value === '') {
+        email.classList.add('border-red-500');
+        email.nextElementSibling.classList.remove('hidden');
+      }
+      if (message.value === '') {
+        message.classList.add('border-red-500');
+        message.nextElementSibling.classList.remove('hidden');
+      }
       return;
     }
     else {
+      firstName.nextElementSibling.classList.add('hidden');
+      lastName.nextElementSibling.classList.add('hidden');
+      email.nextElementSibling.classList.add('hidden');
+      message.nextElementSibling.classList.add('hidden');
+      firstName.classList.add('border-red-500');
+      lastName.classList.add('border-red-500');
+      email.classList.add('border-red-500');
+      message.classList.add('border-red-500');
       console.log('First Name: ',firstName.value);
       console.log('Last Name: ',lastName.value);
       console.log('Email: ',email.value);
@@ -78,9 +105,8 @@ const carousel = {
       message.value = '';
     }
   }
-  const htmlElemt = document.documentElement;
 
-  const handleClick = (e) => {
+const handleClick = (e) => {
     e.srcElement.classList.toggle('fa-toggle-off');
     e.srcElement.classList.toggle('fa-toggle-on');
     if (htmlElemt.getAttribute("data-theme")=='dark') {
@@ -90,7 +116,6 @@ const carousel = {
     } 
 
   }
-
 
 i18next.init({
   lng: 'en',
@@ -122,14 +147,19 @@ i18next.init({
         "Subscribe": "اشترك",
         "She gave my mother such a turn, that I have always been convinced I am indebted to Miss Betsey for having been born on a Friday. The word was appropriate to the moment.": "لقد أعطت والدتي منعطفًا كبيرًا لدرجة أنني كنت دائمًا مقتنعًا بأنني مدين للآنسة بيتسي لأنني ولدت يوم الجمعة. الكلمة كانت مناسبة للحظة.",
         "This sounded nonsense to Alice, so she said nothing, but set off at once toward the Red Queen. To her surprise, she lost sight of her in a moment, and found herself walking in at the front-door again.":"بدا هذا هراءً لأليس، لذا لم تقل شيئًا، وانطلقت على الفور نحو الملكة الحمراء. لدهشتها، فقدت رؤيتها للحظة، ووجدت نفسها تدخل عند الباب الأمامي مرة أخرى.",
+        "Show More":"أظهر المزيد",
+        "Show Less":"أظهر أقل",
+        "Submit":"إرسال",
+        "First Name is required": "الاسم الشخصي مطلوب",
+        "Last Name is required": "الاسم العائلي مطلوب",
+        "Email is required":"البريد الإلكتروني مطلوب",
+        "Message is required":"الرسالة مطلوبة"
       }
     }
   }
 });
-const arabic = document.getElementById('ar');
-const english = document.getElementById('en');
 
-const handleTranslate = (e,lng) => {
+const handleTranslate = (lng) => {
   if (lng === 'ar') {
     arabic.classList.add('font-bold');
     english.classList.remove('font-bold');
@@ -154,7 +184,7 @@ const handleTranslate = (e,lng) => {
   document.getElementById('blog-title-3').innerHTML = i18next.t('The Fall Report');
   document.getElementById('blog-content-6').innerHTML = i18next.t('Thus much I thought proper to tell you in relation to yourself, and to the trust I reposed in you.');
   document.getElementById('blog-content-7').innerHTML = i18next.t('So saying he unbuckled his baldric with the bugle, took a feather from his cap, and gave them to Wamba.');
-  document.getElementById('blog-content-8').innerHTML = i18next.t('She gave my mother such a turn, that I have always been convinced I am indebted to Miss Betsey for having been born on a Friday. The word was appropriate to the moment.');
+document.getElementById('blog-content-8').innerHTML = i18next.t('She gave my mother such a turn, that I have always been convinced I am indebted to Miss Betsey for having been born on a Friday. The word was appropriate to the moment.')
   document.getElementById('contact-title').innerHTML = i18next.t('Contact Us');
   document.getElementById('contact-description').innerHTML = i18next.t('This sounded nonsense to Alice, so she said nothing, but set off at once toward the Red Queen. To her surprise, she lost sight of her in a moment, and found herself walking in at the front-door again.');
   document.getElementById('form-field1').innerHTML = i18next.t('First Name');
@@ -166,5 +196,20 @@ const handleTranslate = (e,lng) => {
   document.getElementById('newsletter-title').innerHTML = i18next.t('Subscribe to our Newsletter');
   document.getElementById('newsletter-description').innerHTML = i18next.t('Stay updated with the latest news and special offers.');
   document.getElementById('subscribe').innerHTML = i18next.t('Subscribe');
+  document.getElementById('error1').innerHTML = i18next.t('First Name is required');
+  document.getElementById('error2').innerHTML = i18next.t('Lirst Name is required');
+  document.getElementById('error3').innerHTML = i18next.t('Message is required');
+  document.getElementById('error4').innerHTML = i18next.t('Email is required');
+  showMore.innerHTML === "Show More" ?  showMore.innerHTML = i18next.t('Show Less') : showMore.innerHTML = i18next.t('Show More');
 }
 
+const handleShowMore = () => {
+  if (additional_Content.classList.contains('hidden')) {
+    additional_Content.classList.remove('hidden');
+    showMore.innerHTML = 'Show Less';
+  }
+  else {
+    additional_Content.classList.add('hidden');
+    showMore.innerHTML = 'Show More';
+  }
+}
