@@ -241,11 +241,20 @@
   .end-2 {
     inset-inline-end: calc(var(--spacing) * 2);
   }
+  .top-0 {
+    top: calc(var(--spacing) * 0);
+  }
+  .left-0 {
+    left: calc(var(--spacing) * 0);
+  }
   .isolate {
     isolation: isolate;
   }
   .isolation-auto {
     isolation: auto;
+  }
+  .z-10 {
+    z-index: 10;
   }
   .z-auto {
     z-index: auto;
@@ -883,6 +892,12 @@
   .justify-items-stretch {
     justify-items: stretch;
   }
+  .gap-1 {
+    gap: calc(var(--spacing) * 1);
+  }
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
+  }
   .gap-\[5px\] {
     gap: 5px;
   }
@@ -1336,11 +1351,14 @@
   .px-\[30px\] {
     padding-inline: 30px;
   }
-  .px-\[50px\] {
-    padding-inline: 50px;
+  .py-2 {
+    padding-block: calc(var(--spacing) * 2);
   }
-  .px-\[70px\] {
-    padding-inline: 70px;
+  .py-2\.5 {
+    padding-block: calc(var(--spacing) * 2.5);
+  }
+  .py-3 {
+    padding-block: calc(var(--spacing) * 3);
   }
   .py-\[20px\] {
     padding-block: 20px;
@@ -1822,6 +1840,10 @@
   .duration-300 {
     --tw-duration: 300ms;
     transition-duration: 300ms;
+  }
+  .duration-500 {
+    --tw-duration: 500ms;
+    transition-duration: 500ms;
   }
   .ease-in {
     --tw-ease: var(--ease-in);
