@@ -22,10 +22,10 @@
     class="flex sticky top-0 left-0 w-full z-10 justify-between items-center min-xl:px-[315px] min-md:px-[200px] py-3 min-sm:px-[100px] px-[30px] bg-[#2F1893]">
     <p id="navbar-title" class="text-white font-bold text-xl">VOID</p>
     <div class="flex gap-[20px] text-white items-center">  
-      <p id="ar" onclick="handleTranslate(event, 'ar')" class="cursor-pointer transition-all duration-500 ease-in-out">
+      <p id="ar" onclick="handleTranslate('ar')" class="cursor-pointer transition-all duration-500 ease-in-out">
         AR
       </p>
-      <p id="en" onclick="handleTranslate(event,'en')" class="cursor-pointer transition-all duration-500 ease-in-out font-bold">
+      <p id="en" onclick="handleTranslate('en')" class="cursor-pointer transition-all duration-500 ease-in-out font-bold">
         EN
       </p>
       <i class="fa fa-2x fa-toggle-off text-white cursor-pointer" onclick="handleClick(event)" aria-hidden="true"></i>
@@ -62,8 +62,8 @@
   </section>
 
   <!---Blog Section-->
-  <section
-    class="min-xl:px-[315px] min-xl:pt-[100px] min-md:px-[200px] pt-[70px] pb-[10px] min-sm:px-[100px] px-[30px] flex flex-col gap-[60px] bg-white dark:bg-black dark:text-white">
+  <section id="blogSection"
+    class="min-xl:px-[315px] h-fit min-xl:pt-[100px] min-md:px-[200px] pt-[70px] pb-[10px] min-sm:px-[100px] px-[30px] flex flex-col gap-[60px] bg-white dark:bg-black dark:text-white">
     <div class="flex flex-col gap-[26px]">
       <p id="blog-title-1" class="text-[42px] max-sm:text-3xl leading-[52px] font-bold text-[#1E0E62] dark:text-white">
         Branding
@@ -122,11 +122,15 @@
           </span>
         </li>
       </ul>
-      <p id="blog-content-8" class="text-[#15143966] dark:text-[#ffffffb3]">
-        She gave my mother such a turn, that I have always been convinced I am
-        indebted to Miss Betsey for having been born on a Friday. The word was
-        appropriate to the moment.
-      </p>
+      <div id="additional_Content" class="transition-all duration-500 ease-in-out hidden">
+        <div  class="flex flex-col">
+          <img src="https://images.unsplash.com/photo-1737958108322-43b24ea9bc18?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="h-auto w-full aspect-video rounded-[10px] object-cover" alt="woman" loading="lazy"/>
+          <p id="blog-content-8" class="text-[#15143966] dark:text-[#ffffffb3] transition-all duration-500 ease-in-out"> She gave my mother such a turn, that I have always been convinced I am indebted to Miss Betsey for having been born on a Friday. The word was appropriate to the moment.</p></div>
+      </div>
+      <button id="showMore" class="h-[4opx] text-[#fff] bg-[#2F1893] w-fit mx-auto px-5 py-3 rounded-[10px] cursor-pointer transition-colors duration-500 ease-in-out hover:bg-black" onclick="handleShowMore(event)">
+        Show More
+      </button>
+      
     </div>
   </section>
 
@@ -170,22 +174,29 @@
           <label id="form-field1" for="FirstName" class="text-[#15143966] dark:text-[#ffffffb3]">First Name</label>
           <input type="text" id="FirstName" name="Firstname"
             class="border-[1px] border-[#15143966] dark:border-[#ffffffb3] rounded-[5px] p-[10px] dark:bg-[#1E1E1E] dark:text-white" />
+            <p class="text-red-600 text-[12px] hidden" id="error1">First Name is required</p>
         </div>
         <div class="flex flex-col gap-[10px] w-full">
           <label id="form-field2" for="LastName" class="text-[#15143966] dark:text-[#ffffffb3]">Last Name</label>
           <input type="text" id="LastName" name="Lastname"
             class="border-[1px] border-[#15143966] dark:border-[#ffffffb3] rounded-[5px] p-[10px] dark:bg-[#1E1E1E] dark:text-white" />
+            <p class="text-red-600 text-[12px] hidden" id="error2">Last Name is required</p>
+
         </div>
       </div>
       <div class="flex flex-col gap-[10px]">
         <label id="form-field3" for="email" class="text-[#15143966] dark:text-[#ffffffb3]">Email</label>
         <input type="email" id="email" name="email"
           class="border-[1px] border-[#15143966] dark:border-[#ffffffb3] rounded-[5px] p-[10px] dark:bg-[#1E1E1E] dark:text-white" />
+          <p class="text-red-600 text-[12px] hidden" id="error3">Email is required</p>
+
       </div>
       <div class="flex flex-col gap-[10px]">
         <label id="form-field4" for="message" class="text-[#15143966] dark:text-[#ffffffb3]">Message</label>
         <textarea id="message" rows="4" name="message"
           class="border-[1px] border-[#15143966] dark:border-[#ffffffb3] rounded-[5px] p-[10px] dark:bg-[#1E1E1E] dark:text-white"></textarea>
+          <p class="text-red-600 text-[12px] hidden" id="error4">Message is required</p>
+
       </div>
       <button id="button" type="submit"
         class="bg-[#2F1893] cursor-pointer h-[45px] text-white rounded hover:bg-[#1E0E62] transition-colors duration-300">Submit</button>
