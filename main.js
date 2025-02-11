@@ -65,6 +65,26 @@ const carousel = {
   };
 carousel.init();
 
+const carouselTestimonial = document.getElementById('testimonial-carousel');
+  const prevBtn = document.getElementById('prev-btn');
+  const nextBtn = document.getElementById('next-btn');
+  let index = 0;
+
+  function updateCarousel() {
+    const offset = -index * 100;
+    carouselTestimonial.style.transform = `translateX(${offset}%)`;
+  }
+
+  nextBtn.addEventListener('click', () => {
+    index = (index + 1) % 3;
+    updateCarousel();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    index = (index - 1 + 3) % 3;
+    updateCarousel();
+  });
+
 const handleSubmit = (e) => {
   e.preventDefault();
     if (firstName.value === '' || lastName.value === '' || email.value === '' || message.value === '') {
@@ -153,7 +173,10 @@ i18next.init({
         "First Name is required": "الاسم الشخصي مطلوب",
         "Last Name is required": "الاسم العائلي مطلوب",
         "Email is required":"البريد الإلكتروني مطلوب",
-        "Message is required":"الرسالة مطلوبة"
+        "Message is required":"الرسالة مطلوبة",
+        "This service exceeded my expectations. Highly recommended!" : "لقد تجاوزت هذه الخدمة توقعاتي. أوصي به بشدة!",
+        "Amazing experience! The team was professional and efficient." : "تجربة مذهلة! كان الفريق محترفًا وفعالًا.",
+        "A fantastic product that I will definitely use again!" : "منتج رائع سأستخدمه بالتأكيد مرة أخرى!",
       }
     }
   }
@@ -201,6 +224,9 @@ document.getElementById('blog-content-8').innerHTML = i18next.t('She gave my mot
   document.getElementById('error3').innerHTML = i18next.t('Message is required');
   document.getElementById('error4').innerHTML = i18next.t('Email is required');
   showMore.innerHTML === "Show More" ?  showMore.innerHTML = i18next.t('Show Less') : showMore.innerHTML = i18next.t('Show More');
+  document.getElementById('testtimonial1').innerHTML = i18next.t('This service exceeded my expectations. Highly recommended!');
+  document.getElementById('testtimonial2').innerHTML = i18next.t('Amazing experience! The team was professional and efficient.');
+  document.getElementById('testtimonial3').innerHTML = i18next.t('A fantastic product that I will definitely use again!');
 }
 
 const handleShowMore = () => {
@@ -213,3 +239,4 @@ const handleShowMore = () => {
     showMore.innerHTML = 'Show More';
   }
 }
+
