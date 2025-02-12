@@ -9,10 +9,22 @@
   <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" type="image/png" href="./images/favicon-32x32.png">
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
     rel="stylesheet">
     <script src="//unpkg.com/i18next/dist/umd/i18next.min.js"></script>
+    <meta name="description" content="VOID - Protect your computer with useful tips. Learn about branding, perfect solutions, and the latest fall report. Contact us for more information.">
+    <meta name="keywords" content="VOID, computer protection, branding, tips, contact, blog, testimonials">
+    <meta name="author" content="Samuel Audlev">
+    <meta property="og:title" content="VOID - Protect Your Computer">
+    <meta property="og:description" content="Learn how to protect your computer with useful tips. Explore our blog for branding insights and more.">
+    <meta property="og:image" content="https://example.com/images/og-image.png">
+    <meta property="og:url" content="https://example.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="VOID - Protect Your Computer">
+    <meta name="twitter:description" content="Learn how to protect your computer with useful tips. Explore our blog for branding insights and more.">
+    <meta name="twitter:image" content="https://example.com/images/twitter-image.png">
 </head>
 
 <body>
@@ -22,12 +34,12 @@
     class="flex sticky top-0 left-0 w-full z-10 justify-between items-center min-xl:px-[315px] min-md:px-[200px] py-3 min-sm:px-[100px] px-[30px] bg-[#2F1893]">
     <p id="navbar-title" class="text-white font-bold text-xl">VOID</p>
     <div class="flex gap-[20px] text-white items-center">  
-      <p id="ar" onclick="handleTranslate('ar')" class="cursor-pointer transition-all duration-500 ease-in-out">
+      <a id="ar" href="./arabic.html" class="cursor-pointer transition-all duration-500 ease-in-out">
         AR
-      </p>
-      <p id="en" onclick="handleTranslate('en')" class="cursor-pointer transition-all duration-500 ease-in-out font-bold">
+      </a>
+      <a id="en" href="./index.html" class="cursor-pointer transition-all duration-500 ease-in-out font-bold">
         EN
-      </p>
+      </a>
       <i class="fa fa-2x fa-toggle-off text-white cursor-pointer" onclick="handleClick(event)" aria-hidden="true"></i>
     </div>
   </nav>
@@ -94,8 +106,12 @@
         indebted to Miss Betsey for having been born on a Friday. The word was
         appropriate to the moment.
       </p>
+      <picture>
+        <source srcset="./images/woman.png" type="image/png" media="(min-width: 1250px)"/>
+        <source srcset="./images/Woman-large.webp" type="image/webp" media="(min-width: 1024px)"/>
+        <source srcset="./images/Woman-medium.webp" type="image/webp" media="(max-width: 600px)"/>
       <img src="./images/woman.png" class="h-auto w-full aspect-video rounded-[10px] object-cover" alt="woman" loading="lazy"/>
-      
+      </picture>  
       <p id="blog-content-4" class="text-[14px] leading-[26px] uppercase text-[#1E0E62] dark:text-[#ffffffb3]">
         There have not been any since
       </p>
@@ -128,7 +144,13 @@
       </ul>
       <div id="additional_Content" class="transition-all duration-500 ease-in-out hidden">
         <div  class="flex flex-col">
-          <img src="https://images.unsplash.com/photo-1737958108322-43b24ea9bc18?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="h-auto w-full aspect-video rounded-[10px] object-cover" alt="woman" loading="lazy"/>
+          <picture>
+            <source srcset="https://images.unsplash.com/photo-1737958108322-43b24ea9bc18?q=80&w=2500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" media="(min-width: 1250px)" />
+            <source srcset="https://images.unsplash.com/photo-1737958108322-43b24ea9bc18?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" media="(min-width: 950px)" />
+            <source srcset="https://images.unsplash.com/photo-1737958108322-43b24ea9bc18?q=80&w=700&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" media="(min-width: 700px)" />
+            <source srcset="https://images.unsplash.com/photo-1737958108322-43b24ea9bc18?q=80&w=500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" media="(max-width: 699px)" />
+            <img src="https://images.unsplash.com/photo-1737958108322-43b24ea9bc18?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="h-auto w-full aspect-video rounded-[10px] object-cover" alt="woman" loading="lazy"/>
+          </picture>
           <p id="blog-content-8" class="text-[#1E0E62] dark:text-[#ffffffb3] transition-all duration-500 ease-in-out"> She gave my mother such a turn, that I have always been convinced I am indebted to Miss Betsey for having been born on a Friday. The word was appropriate to the moment.</p></div>
       </div>
       <button id="showMore" class="h-[4opx] text-[#fff] bg-[#2F1893] w-fit mx-auto px-5 py-3 rounded-[10px] cursor-pointer transition-colors duration-500 ease-in-out hover:bg-black" onclick="handleShowMore(event)">
@@ -143,13 +165,31 @@
     class="min-xl:px-[315px] pb-[100px] min-md:px-[200px] py-[70px] min-sm:px-[100px] px-[30px] flex flex-col gap-[60px] dark:bg-black" id="carousel" dir="ltr">
     <div class="relative  w-full min-lg:h-[500px] max-md:h-[300px] max-lg:h-[400px] ">
       <div class="carousel-slide active">
-        <img src="https://img.freepik.com/free-photo/island-seen-from-sea_1286-137.jpg?t=st=1739266228~exp=1739269828~hmac=32b9bd099e26bd3d6a28d7de9b63de54143610b8a37767371327369d75d874bf&w=2000" alt="Nature 1" class="carousel-img aspect-video object-cover " loading="lazy">
+        <picture>
+          <source srcset="https://img.freepik.com/free-photo/island-seen-from-sea_1286-137.jpg?t=st=1739266228~exp=1739269828~hmac=32b9bd099e26bd3d6a28d7de9b63de54143610b8a37767371327369d75d874bf&w=1250" media="(min-width: 1250px)" />
+          <source srcset="https://img.freepik.com/free-photo/island-seen-from-sea_1286-137.jpg?t=st=1739266228~exp=1739269828~hmac=32b9bd099e26bd3d6a28d7de9b63de54143610b8a37767371327369d75d874bf&w=1000" media="(min-width: 950px)" />
+          <source srcset="https://img.freepik.com/free-photo/island-seen-from-sea_1286-137.jpg?t=st=1739266228~exp=1739269828~hmac=32b9bd099e26bd3d6a28d7de9b63de54143610b8a37767371327369d75d874bf&w=800" media="(min-width: 700px)" />
+          <source srcset="https://img.freepik.com/free-photo/island-seen-from-sea_1286-137.jpg?t=st=1739266228~exp=1739269828~hmac=32b9bd099e26bd3d6a28d7de9b63de54143610b8a37767371327369d75d874bf&w=600" media="(max-width: 699px)" />
+          <img src="https://img.freepik.com/free-photo/island-seen-from-sea_1286-137.jpg?t=st=1739266228~exp=1739269828~hmac=32b9bd099e26bd3d6a28d7de9b63de54143610b8a37767371327369d75d874bf&w=400" class="h-auto w-full aspect-video rounded-[10px] object-cover" alt="woman" loading="lazy"/>
+        </picture>
       </div>
       <div class="carousel-slide">
-        <img src="https://img.freepik.com/free-photo/long-boat-blue-water-maya-bay-phi-phi-island-krabi-thailand_335224-895.jpg?t=st=1739266296~exp=1739269896~hmac=0a83ceb289f77b8906b155a45e3d0a19f1fe0f42cbe7869c6555626970cf9691&w=2000" alt="Nature 2" class="carousel-img aspect-video object-cover " loading="lazy">
+        <picture>
+          <source srcset="https://img.freepik.com/free-photo/long-boat-blue-water-maya-bay-phi-phi-island-krabi-thailand_335224-895.jpg?t=st=1739266296~exp=1739269896~hmac=0a83ceb289f77b8906b155a45e3d0a19f1fe0f42cbe7869c6555626970cf9691&w=1250" media="(min-width: 1250px)" />
+          <source srcset="https://img.freepik.com/free-photo/long-boat-blue-water-maya-bay-phi-phi-island-krabi-thailand_335224-895.jpg?t=st=1739266296~exp=1739269896~hmac=0a83ceb289f77b8906b155a45e3d0a19f1fe0f42cbe7869c6555626970cf9691&w=1000" media="(min-width: 950px)" />
+          <source srcset="https://img.freepik.com/free-photo/long-boat-blue-water-maya-bay-phi-phi-island-krabi-thailand_335224-895.jpg?t=st=1739266296~exp=1739269896~hmac=0a83ceb289f77b8906b155a45e3d0a19f1fe0f42cbe7869c6555626970cf9691&w=800" media="(min-width: 700px)" />
+          <source srcset="https://img.freepik.com/free-photo/long-boat-blue-water-maya-bay-phi-phi-island-krabi-thailand_335224-895.jpg?t=st=1739266296~exp=1739269896~hmac=0a83ceb289f77b8906b155a45e3d0a19f1fe0f42cbe7869c6555626970cf9691&w=600" media="(max-width: 699px)" />
+          <img src="https://img.freepik.com/free-photo/long-boat-blue-water-maya-bay-phi-phi-island-krabi-thailand_335224-895.jpg?t=st=1739266296~exp=1739269896~hmac=0a83ceb289f77b8906b155a45e3d0a19f1fe0f42cbe7869c6555626970cf9691&w=400" class="h-auto w-full aspect-video rounded-[10px] object-cover" alt="woman" loading="lazy"/>
+        </picture>
       </div>
       <div class="carousel-slide">
-        <img src="https://img.freepik.com/free-photo/landscape-tropical-vacation-palm-summer_1203-5352.jpg?t=st=1739266320~exp=1739269920~hmac=c5f206cec65d8b5418d42efb638efcf29b55a3ef02e50ad31270e6373c3d0211&w=2000" alt="Nature 3" class="carousel-img aspect-video object-cover " loading="lazy">
+        <picture>
+          <source srcset="https://img.freepik.com/free-photo/landscape-tropical-vacation-palm-summer_1203-5352.jpg?t=st=1739266320~exp=1739269920~hmac=c5f206cec65d8b5418d42efb638efcf29b55a3ef02e50ad31270e6373c3d0211&w=1250" media="(min-width: 1250px)" />
+          <source srcset="https://img.freepik.com/free-photo/landscape-tropical-vacation-palm-summer_1203-5352.jpg?t=st=1739266320~exp=1739269920~hmac=c5f206cec65d8b5418d42efb638efcf29b55a3ef02e50ad31270e6373c3d0211&w=1000" media="(min-width: 950px)" />
+          <source srcset="https://img.freepik.com/free-photo/landscape-tropical-vacation-palm-summer_1203-5352.jpg?t=st=1739266320~exp=1739269920~hmac=c5f206cec65d8b5418d42efb638efcf29b55a3ef02e50ad31270e6373c3d0211&w=800" media="(min-width: 700px)" />
+          <source srcset="https://img.freepik.com/free-photo/landscape-tropical-vacation-palm-summer_1203-5352.jpg?t=st=1739266320~exp=1739269920~hmac=c5f206cec65d8b5418d42efb638efcf29b55a3ef02e50ad31270e6373c3d0211&w=600" media="(max-width: 699px)" />
+          <img src="https://img.freepik.com/free-photo/landscape-tropical-vacation-palm-summer_1203-5352.jpg?t=st=1739266320~exp=1739269920~hmac=c5f206cec65d8b5418d42efb638efcf29b55a3ef02e50ad31270e6373c3d0211&w=400" class="h-auto w-full aspect-video rounded-[10px] object-cover" alt="woman" loading="lazy"/>
+        </picture>
       </div>
 
       <button class="carousel-btn prev">❮</button>
