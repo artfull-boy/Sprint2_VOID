@@ -10,7 +10,6 @@
     --color-red-600: oklch(0.577 0.245 27.325);
     --color-yellow-50: oklch(0.987 0.026 102.212);
     --color-green-600: oklch(0.627 0.194 149.214);
-    --color-gray-200: oklch(0.928 0.006 264.531);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -20,7 +19,6 @@
     --text-3xl--line-height: calc(2.25 / 1.875);
     --font-weight-normal: 400;
     --font-weight-medium: 500;
-    --font-weight-semibold: 600;
     --font-weight-bold: 700;
     --radius-lg: 0.5rem;
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
@@ -186,9 +184,6 @@
   .collapse {
     visibility: collapse;
   }
-  .absolute {
-    position: absolute;
-  }
   .relative {
     position: relative;
   }
@@ -198,17 +193,8 @@
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
-  .top-1\/2 {
-    top: calc(1/2 * 100%);
-  }
-  .right-2 {
-    right: calc(var(--spacing) * 2);
-  }
   .left-0 {
     left: calc(var(--spacing) * 0);
-  }
-  .left-2 {
-    left: calc(var(--spacing) * 2);
   }
   .z-10 {
     z-index: 10;
@@ -262,13 +248,9 @@
     width: 60px !important;
     height: 60px !important;
   }
-  .size-7 {
-    width: calc(var(--spacing) * 7);
-    height: calc(var(--spacing) * 7);
-  }
-  .size-\[60px\] {
-    width: 60px;
-    height: 60px;
+  .size-\[140px\] {
+    width: 140px;
+    height: 140px;
   }
   .\!h-full {
     height: 100% !important;
@@ -299,16 +281,6 @@
   }
   .w-full {
     width: 100%;
-  }
-  .min-w-full {
-    min-width: 100%;
-  }
-  .-translate-y-1\/2 {
-    --tw-translate-y: calc(calc(1/2 * 100%) * -1);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-  .transform {
-    transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
   }
   .cursor-pointer {
     cursor: pointer;
@@ -394,9 +366,6 @@
   }
   .bg-\[\#fff\] {
     background-color: #fff;
-  }
-  .bg-gray-200 {
-    background-color: var(--color-gray-200);
   }
   .bg-white {
     background-color: var(--color-white);
@@ -493,10 +462,6 @@
     --tw-font-weight: var(--font-weight-normal);
     font-weight: var(--font-weight-normal);
   }
-  .font-semibold {
-    --tw-font-weight: var(--font-weight-semibold);
-    font-weight: var(--font-weight-semibold);
-  }
   .text-\[\#1E0E62\] {
     color: #1E0E62;
   }
@@ -561,13 +526,6 @@
     &:hover {
       @media (hover: hover) {
         background-color: #1E0E62;
-      }
-    }
-  }
-  .hover\:bg-\[\#2F1893\] {
-    &:hover {
-      @media (hover: hover) {
-        background-color: #2F1893;
       }
     }
   }
@@ -702,7 +660,7 @@ h2 {
   line-height: 52px;
   margin: 0;
 }
-h4 {
+h3 {
   font-size: 22px;
   font-weight: medium;
   line-height: 32px;
@@ -858,46 +816,6 @@ h4 {
   width: 100%;
   height: auto;
   border-radius: 10px;
-}
-@property --tw-translate-x {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0;
-}
-@property --tw-translate-y {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0;
-}
-@property --tw-translate-z {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0;
-}
-@property --tw-rotate-x {
-  syntax: "*";
-  inherits: false;
-  initial-value: rotateX(0);
-}
-@property --tw-rotate-y {
-  syntax: "*";
-  inherits: false;
-  initial-value: rotateY(0);
-}
-@property --tw-rotate-z {
-  syntax: "*";
-  inherits: false;
-  initial-value: rotateZ(0);
-}
-@property --tw-skew-x {
-  syntax: "*";
-  inherits: false;
-  initial-value: skewX(0);
-}
-@property --tw-skew-y {
-  syntax: "*";
-  inherits: false;
-  initial-value: skewY(0);
 }
 @property --tw-border-style {
   syntax: "*";
