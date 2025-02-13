@@ -11,3 +11,4 @@ const handleShowMore = () => {
     window.location.href.includes("index.html") ? showMore.innerHTML = 'Show More' : showMore.innerHTML = 'أظهر المزيد';
   }
 }
+showMore.addEventListener('click', handleShowMore);
