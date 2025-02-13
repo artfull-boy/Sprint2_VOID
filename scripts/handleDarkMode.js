@@ -1,4 +1,5 @@
 const htmlElemt = document.documentElement;
+const darkModeHandler = document.getElementById('darkModeHandler');
 
 const handleDarkMode = (event) => {
         event.srcElement.classList.toggle('fa-toggle-off');
@@ -9,3 +10,4 @@ const handleDarkMode = (event) => {
                 htmlElemt.setAttribute("data-theme", "dark");
         }
 }
+darkModeHandler.addEventListener('click', handleDarkMode);
