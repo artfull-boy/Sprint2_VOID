@@ -97,7 +97,7 @@
           </a>
           <i
             class="fa fa-2x fa-toggle-off text-white cursor-pointer"
-            onclick="handleDarkMode(event)"
+            id="darkModeHandler"
             aria-hidden="true"
           ></i>
         </div>
@@ -122,16 +122,13 @@
         <div class="flex gap-[24px] items-center">
           <picture>
             <source
-              srcset="./images/Userpic@2x.png"
-              media="(min-width: 1024px)"
+              srcset="./images/Userpic.webp"
+              type="image/webp"
             />
-            <source srcset="./images/Userpic.png" media="(min-width: 650px)" />
             <img
               src="./images/Userpic.png"
               alt="hero-image"
-              width="100px"
-              height="100px"
-              class="max-sm:size-[70px] rounded-full"
+              class="max-sm:size-[70px] size-[140px] rounded-full"
               loading="lazy"
             />
           </picture>
@@ -185,9 +182,9 @@
           </p>
         </div>
         <div class="flex flex-col gap-[26px]">
-          <h4 id="blog-title-2" class="text-[#1E0E62] dark:text-white">
+          <h3 id="blog-title-2" class="text-[#1E0E62] dark:text-white">
             Perfect for Your
-          </h4>
+          </h3>
 
           <p id="blog-content-3" class="text-[#1E0E62] dark:text-[#ffffffb3]">
             She gave my mother such a turn, that I have always been convinced I
@@ -225,9 +222,9 @@
           </p>
         </div>
         <div class="flex flex-col gap-[26px]">
-          <h4 id="blog-title-3" class="text-[#1E0E62] dark:text-white">
+          <h3 id="blog-title-3" class="text-[#1E0E62] dark:text-white">
             The Fall Report
-          </h4>
+          </h3>
 
           <p id="blog-content-5" class="text-[#1E0E62] dark:text-[#ffffffb3]">
             This sounded nonsense to Alice, so she said nothing, but set off at
@@ -309,7 +306,6 @@
           <button
             id="showMore"
             class="h-[4opx] text-[#fff] bg-[#2F1893] w-fit mx-auto px-5 py-3 rounded-[10px] cursor-pointer transition-colors duration-500 ease-in-out hover:bg-black"
-            onclick="handleShowMore(event)"
           >
             Show More
           </button>
@@ -503,7 +499,7 @@
               type="email"
               id="email"
               name="email"
-              class="border-[1px] border-[#1E0E62] dark:border-[#ffffffb3] rounded-[5px] p-[10px] dark:bg-[#1E1E1E] dark:text-white"
+              class="border-[1px] border-[#1E0E62] dark:border-[#ffffffb3] rounded-[5px] p-[10px] dark:bg-[#1E1E1E] dark:text-white" autocomplete="email"
             />
             <p class="text-red-600 text-[12px] hidden" id="error3">
               Email is required
@@ -562,11 +558,38 @@
                 "This service exceeded my expectations. Highly recommended!"
               </p>
               <div class="mt-4 flex justify-center">
-                <img
-                  src="https://img.freepik.com/photos-gratuite/portrait-femme-blonde-souriante_23-2148316635.jpg?t=st=1739286679~exp=1739290279~hmac=088487730bf7b37cd11fb93c147569e136e0c8b5312ac34a91d992b8ebf10719&w=1480"
-                  alt="User"
-                  class="!size-[60px] !rounded-full object-cover"
-                />
+                <picture>
+                  <source
+                    srcset="
+                    https://img.freepik.com/photos-gratuite/portrait-femme-blonde-souriante_23-2148316635.jpg?t=st=1739286679~exp=1739290279~hmac=088487730bf7b37cd11fb93c147569e136e0c8b5312ac34a91d992b8ebf10719&w=900
+                    "
+                    media="(min-width: 1250px)"
+                  />
+                  <source
+                    srcset="
+                    https://img.freepik.com/photos-gratuite/portrait-femme-blonde-souriante_23-2148316635.jpg?t=st=1739286679~exp=1739290279~hmac=088487730bf7b37cd11fb93c147569e136e0c8b5312ac34a91d992b8ebf10719&w=800
+                    "
+                    media="(min-width: 950px)"
+                  />
+                  <source
+                    srcset="
+                    https://img.freepik.com/photos-gratuite/portrait-femme-blonde-souriante_23-2148316635.jpg?t=st=1739286679~exp=1739290279~hmac=088487730bf7b37cd11fb93c147569e136e0c8b5312ac34a91d992b8ebf10719&w=600
+                    "
+                    media="(min-width: 700px)"
+                  />
+                  <source
+                    srcset="
+                    https://img.freepik.com/photos-gratuite/portrait-femme-blonde-souriante_23-2148316635.jpg?t=st=1739286679~exp=1739290279~hmac=088487730bf7b37cd11fb93c147569e136e0c8b5312ac34a91d992b8ebf10719&w=400
+                    "
+                    media="(max-width: 699px)"
+                  />
+                  <img
+                    src="https://img.freepik.com/photos-gratuite/portrait-femme-blonde-souriante_23-2148316635.jpg?t=st=1739286679~exp=1739290279~hmac=088487730bf7b37cd11fb93c147569e136e0c8b5312ac34a91d992b8ebf10719&w=600"
+                    class="!size-[60px] !rounded-full object-cover"
+                    alt="User"
+                    loading="lazy"
+                  />
+                </picture>
               </div>
               <p class="mt-2 font-normal text-[15px] dark:text-[#fff]">
                 John Doe
@@ -583,11 +606,38 @@
                 "Amazing experience! The team was professional and efficient."
               </p>
               <div class="mt-4 flex justify-center">
-                <img
-                  src="https://img.freepik.com/photos-gratuite/tour-taille-jeune-femme-europeenne-attrayante-positive-employee-etudiant-portant-du-rouge-levres-lunettes-ovales-souriant-confiance-gardant-bras-croises-posant-isole_344912-548.jpg?t=st=1739286712~exp=1739290312~hmac=addfa96cabcafb23c59e8a9619ce2b23ecab5a3c1746a9fc8d554203c80a01bb&w=2000"
-                  alt="User"
-                  class="!size-[60px] !rounded-full object-cover"
-                />
+                <picture>
+                  <source
+                    srcset="
+                    https://img.freepik.com/photos-gratuite/tour-taille-jeune-femme-europeenne-attrayante-positive-employee-etudiant-portant-du-rouge-levres-lunettes-ovales-souriant-confiance-gardant-bras-croises-posant-isole_344912-548.jpg?t=st=1739286712~exp=1739290312~hmac=addfa96cabcafb23c59e8a9619ce2b23ecab5a3c1746a9fc8d554203c80a01bb&w=900
+                    "
+                    media="(min-width: 1250px)"
+                  />
+                  <source
+                    srcset="
+                    https://img.freepik.com/photos-gratuite/tour-taille-jeune-femme-europeenne-attrayante-positive-employee-etudiant-portant-du-rouge-levres-lunettes-ovales-souriant-confiance-gardant-bras-croises-posant-isole_344912-548.jpg?t=st=1739286712~exp=1739290312~hmac=addfa96cabcafb23c59e8a9619ce2b23ecab5a3c1746a9fc8d554203c80a01bb&w=800
+                    "
+                    media="(min-width: 950px)"
+                  />
+                  <source
+                    srcset="
+                    https://img.freepik.com/photos-gratuite/tour-taille-jeune-femme-europeenne-attrayante-positive-employee-etudiant-portant-du-rouge-levres-lunettes-ovales-souriant-confiance-gardant-bras-croises-posant-isole_344912-548.jpg?t=st=1739286712~exp=1739290312~hmac=addfa96cabcafb23c59e8a9619ce2b23ecab5a3c1746a9fc8d554203c80a01bb&w=600
+                    "
+                    media="(min-width: 700px)"
+                  />
+                  <source
+                    srcset="
+                    https://img.freepik.com/photos-gratuite/tour-taille-jeune-femme-europeenne-attrayante-positive-employee-etudiant-portant-du-rouge-levres-lunettes-ovales-souriant-confiance-gardant-bras-croises-posant-isole_344912-548.jpg?t=st=1739286712~exp=1739290312~hmac=addfa96cabcafb23c59e8a9619ce2b23ecab5a3c1746a9fc8d554203c80a01bb&w=400
+                    "
+                    media="(max-width: 699px)"
+                  />
+                  <img
+                    src="https://img.freepik.com/photos-gratuite/tour-taille-jeune-femme-europeenne-attrayante-positive-employee-etudiant-portant-du-rouge-levres-lunettes-ovales-souriant-confiance-gardant-bras-croises-posant-isole_344912-548.jpg?t=st=1739286712~exp=1739290312~hmac=addfa96cabcafb23c59e8a9619ce2b23ecab5a3c1746a9fc8d554203c80a01bb&w=600"
+                    class="!size-[60px] !rounded-full object-cover"
+                    alt="User"
+                    loading="lazy"
+                  />
+                </picture>
               </div>
               <p class="mt-2 font-normal text-[15px] dark:text-[#fff]">
                 Jane Smith
@@ -604,11 +654,38 @@
                 "A fantastic product that I will definitely use again!"
               </p>
               <div class="mt-4 flex justify-center">
-                <img
-                  src="https://img.freepik.com/photos-gratuite/portrait-jeune-homme-beau-modele-souriant-vetu-vetements-gris-capuche-decontracte-posant-mur-blanc-isole_158538-6978.jpg?t=st=1739286741~exp=1739290341~hmac=fe790e7da5ff742ede8eb7338da6e8651e90f3ee3cbfeed5cf25390ebec9fd54&w=2000"
-                  alt="User"
-                  class="!size-[60px] !rounded-full object-cover"
-                />
+                <picture>
+                  <source
+                    srcset="
+                    https://img.freepik.com/photos-gratuite/portrait-jeune-homme-beau-modele-souriant-vetu-vetements-gris-capuche-decontracte-posant-mur-blanc-isole_158538-6978.jpg?t=st=1739286741~exp=1739290341~hmac=fe790e7da5ff742ede8eb7338da6e8651e90f3ee3cbfeed5cf25390ebec9fd54&w=900
+                    "
+                    media="(min-width: 1250px)"
+                  />
+                  <source
+                    srcset="
+                    https://img.freepik.com/photos-gratuite/portrait-jeune-homme-beau-modele-souriant-vetu-vetements-gris-capuche-decontracte-posant-mur-blanc-isole_158538-6978.jpg?t=st=1739286741~exp=1739290341~hmac=fe790e7da5ff742ede8eb7338da6e8651e90f3ee3cbfeed5cf25390ebec9fd54&w=800
+                    "
+                    media="(min-width: 950px)"
+                  />
+                  <source
+                    srcset="
+                    https://img.freepik.com/photos-gratuite/portrait-jeune-homme-beau-modele-souriant-vetu-vetements-gris-capuche-decontracte-posant-mur-blanc-isole_158538-6978.jpg?t=st=1739286741~exp=1739290341~hmac=fe790e7da5ff742ede8eb7338da6e8651e90f3ee3cbfeed5cf25390ebec9fd54&w=600
+                    "
+                    media="(min-width: 700px)"
+                  />
+                  <source
+                    srcset="
+                    https://img.freepik.com/photos-gratuite/portrait-jeune-homme-beau-modele-souriant-vetu-vetements-gris-capuche-decontracte-posant-mur-blanc-isole_158538-6978.jpg?t=st=1739286741~exp=1739290341~hmac=fe790e7da5ff742ede8eb7338da6e8651e90f3ee3cbfeed5cf25390ebec9fd54&w=400
+                    "
+                    media="(max-width: 699px)"
+                  />
+                  <img
+                    src="https://img.freepik.com/photos-gratuite/portrait-jeune-homme-beau-modele-souriant-vetu-vetements-gris-capuche-decontracte-posant-mur-blanc-isole_158538-6978.jpg?t=st=1739286741~exp=1739290341~hmac=fe790e7da5ff742ede8eb7338da6e8651e90f3ee3cbfeed5cf25390ebec9fd54&w=600"
+                    class="!size-[60px] !rounded-full object-cover"
+                    alt="User"
+                    loading="lazy"
+                  />
+                </picture>
               </div>
               <p class="mt-2 font-normal text-[15px] dark:text-[#fff]">
                 Alex Brown
@@ -622,4 +699,4 @@
       </section>
     </main>
   </body>
-</html>
+  </html>
