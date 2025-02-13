@@ -1,291 +1,625 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="VOID - Protect your computer with useful tips. Learn about branding, perfect solutions, and the latest fall report. Contact us for more information."
+    />
+    <meta
+      name="keywords"
+      content="VOID, computer protection, branding, tips, contact, blog, testimonials"
+    />
+    <meta name="author" content="Samuel Audlev" />
+    <meta property="og:title" content="VOID - Protect Your Computer" />
+    <meta
+      property="og:description"
+      content="Learn how to protect your computer with useful tips. Explore our blog for branding insights and more."
+    />
+    <meta
+      property="og:image"
+      content="https://sprint2-void.vercel.app/images/woman.png"
+    />
+    <meta property="og:url" content="https://sprint2-void.vercel.app" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="VOID - Protect Your Computer" />
+    <meta
+      name="twitter:description"
+      content="Learn how to protect your computer with useful tips. Explore our blog for branding insights and more."
+    />
+    <meta
+      name="twitter:image"
+      content="https://sprint2-void.vercel.app/images/woman.png"
+    />
+    <!-- Resources -->
+    <link href="./output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="./font-awesome-4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" type="image/png" href="./images/favicon-32x32.png" />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://sprint2-void.vercel.app/"
+    />
+    <link
+      rel="alternate"
+      hreflang="ar"
+      href="https://sprint2-void.vercel.app/arabic.html"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Scripts -->
+    <link rel="preload" href="./scripts/carousel.js" as="script" />
+    <link rel="preload" href="./scripts/newsletter.js" as="script" />
+    <link rel="preload" href="./scripts/handleShowMore.js" as="script" />
+    <link rel="preload" href="./scripts/handleSubmit.js" as="script" />
+    <link rel="preload" href="./scripts/handleDarkMode.js" as="script" />
+    <link rel="preload" href="./scripts/handleTranslation.js" as="script" />
+    <script src="./scripts/carousel.js" defer></script>
+    <script src="./scripts/newsletter.js" defer></script>
+    <script src="./scripts/handleShowMore.js" defer></script>
+    <script src="./scripts/handleSubmit.js" defer></script>
+    <script src="./scripts/handleDarkMode.js" defer></script>
+    <script src="./scripts/handleTranslation.js" defer></script>
+    <title>Sprint 2 - VOID</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sprint 2 - VOID</title>
-  <link href="./output.css" rel="stylesheet" />
-  <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="icon" type="image/png" href="./images/favicon-32x32.png">
-  <link rel="alternate" hreflang="en" href="https://sprint2-void.vercel.app/" />
-<link rel="alternate" hreflang="ar" href="https://sprint2-void.vercel.app/arabic.html" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
-    rel="stylesheet">
-    <script src="//unpkg.com/i18next/dist/umd/i18next.min.js"></script>
-    <meta name="description" content="VOID - Protect your computer with useful tips. Learn about branding, perfect solutions, and the latest fall report. Contact us for more information.">
-    <meta name="keywords" content="VOID, computer protection, branding, tips, contact, blog, testimonials">
-    <meta name="author" content="Samuel Audlev">
-    <meta property="og:title" content="VOID - Protect Your Computer">
-    <meta property="og:description" content="Learn how to protect your computer with useful tips. Explore our blog for branding insights and more.">
-    <meta property="og:image" content="https://example.com/images/og-image.png">
-    <meta property="og:url" content="https://example.com">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="VOID - Protect Your Computer">
-    <meta name="twitter:description" content="Learn how to protect your computer with useful tips. Explore our blog for branding insights and more.">
-    <meta name="twitter:image" content="https://example.com/images/twitter-image.png">
-</head>
-
-<body>
-
-  <!---Navbar Section-->
-  <nav
-    class="flex sticky top-0 left-0 w-full z-10 justify-between items-center min-xl:px-[315px] min-md:px-[200px] py-3 min-sm:px-[100px] px-[30px] bg-[#2F1893]">
-    <p id="navbar-title" class="text-white font-bold text-xl">VOID</p>
-    <div class="flex gap-[20px] text-white items-center">  
-      <a id="ar" href="./arabic.html" class="cursor-pointer transition-all duration-500 ease-in-out">
-        AR
-      </a>
-      <a id="en" href="./index.html" class="cursor-pointer transition-all duration-500 ease-in-out font-bold">
-        EN
-      </a>
-      <i class="fa fa-2x fa-toggle-off text-white cursor-pointer" onclick="handleClick(event)" aria-hidden="true"></i>
-    </div>
-  </nav>
-
-  <!---Hero Section-->
-  <section
-    class="body-font bg-[#2F1893] min-xl:px-[315px] min-xl:py-[100px] min-md:px-[200px] min-md:py-[100px] min-sm:px-[100px] px-[30px] py-[70px] flex flex-col gap-[157px]">
-    <div class="flex gap-[24px] flex-col">
-      <h2 id="hero-title" class="text-[58px] text-white font-bold max-sm:text-3xl">
-        How To Protect Computer.<br />Very Useful Tips
-      </h2>
-      <p id="hero-subtitle" class="text-[14px] text-white">Splashproof Design</p>
-    </div>
-    <div class="flex gap-[24px] items-center">
-      <picture>
-        <source srcset="./images/Userpic@2x.png" media="(min-width: 1024px)" />
-        <source srcset="./images/Userpic.png" media="(min-width: 650px)" />
-        <img src="./images/Userpic.png" alt="hero-image" width="100px" height="100px"
-          class="max-sm:size-[70px] rounded-full" loading="lazy"/>
-      </picture>
-      <div class="flex flex-col gap-[5px] ">
-        <p id="hero-author" class="uppercase text-[14px] leading-[26px] text-white">
-          Samuel Audlev
-        </p>
-        <p id="hero-description" class="uppercase text-[14px] max-sm:text-[12px] text-[#ffffffd4] leading-[26px]">
-          Saving the world. Shaping the world.
-        </p>
-        <div class="flex gap-[20px] text-white">
-          <i class="fa fa-twitter cursor-pointer" aria-hidden="true"></i>
-          <i class="fa fa-facebook cursor-pointer" aria-hidden="true"></i>
-          <i class="fa fa-dribbble cursor-pointer" aria-hidden="true"></i>
-          <i class="fa fa-instagram cursor-pointer" aria-hidden="true"></i>
+  <body>
+    <!---Header Section-->
+    <header class="sticky top-0 left-0 w-full z-10">
+      <!---Navbar Section-->
+      <nav
+        class="flex justify-between items-center min-xl:px-[315px] min-md:px-[200px] py-3 min-sm:px-[100px] px-[30px] bg-[#2F1893]"
+      >
+        <p id="navbar-title" class="text-white font-bold text-xl">VOID</p>
+        <div class="flex gap-[20px] text-white items-center">
+          <a
+            id="ar"
+            href="./arabic.html"
+            class="cursor-pointer transition-all duration-500 ease-in-out"
+          >
+            AR
+          </a>
+          <a
+            id="en"
+            href="./index.html"
+            class="cursor-pointer transition-all duration-500 ease-in-out font-bold"
+          >
+            EN
+          </a>
+          <i
+            class="fa fa-2x fa-toggle-off text-white cursor-pointer"
+            onclick="handleDarkMode(event)"
+            aria-hidden="true"
+          ></i>
         </div>
-      </div>
-    </div>
-  </section>
+      </nav>
+    </header>
 
-  <!---Blog Section-->
-  <section id="blogSection"
-    class="min-xl:px-[315px] h-fit min-xl:pt-[100px] min-md:px-[200px] pt-[70px] pb-[10px] min-sm:px-[100px] px-[30px] flex flex-col gap-[60px] bg-white dark:bg-black dark:text-white">
-    <div class="flex flex-col gap-[26px]">
-      <p id="blog-title-1" class="text-[42px] max-sm:text-3xl leading-[52px] font-bold text-[#1E0E62] dark:text-white">
-        Branding
-      </p>
+    <!-- Main Section -->
+    <main>
 
-      <p id="blog-content-1" class="text-[#1E0E62] dark:text-[#ffffffb3]">
-        This sounded nonsense to Alice, so she said nothing, but set off at once toward the Red Queen. To her surprise, she lost sight of her in a moment, and found herself walking in at the front-door again.
-      </p>
-      <p id="blog-content-2" class="text-[#1E0E62] dark:text-[#ffffffb3]">
-        For some minutes Alice stood without speaking, looking out in all
-        directions over the country - and a most curious country it was. There
-        were a number of tiny little brooks running straight across it from
-        side to side, and the ground between was divided up into squares by a
-        number of little.
-      </p>
-    </div>
-    <div class="flex flex-col gap-[26px]">
-      <p id="blog-title-2" class="text-[22px] leading-[32px] font-medium text-[#1E0E62] dark:text-white">
-        Perfect for Your
-      </p>
-
-      <p id="blog-content-3" class="text-[#1E0E62] dark:text-[#ffffffb3]">
-        She gave my mother such a turn, that I have always been convinced I am
-        indebted to Miss Betsey for having been born on a Friday. The word was
-        appropriate to the moment.
-      </p>
-      <picture>
-        <source srcset="./images/woman.png" type="image/png" media="(min-width: 1250px)"/>
-        <source srcset="./images/Woman-large.webp" type="image/webp" media="(min-width: 1024px)"/>
-        <source srcset="./images/Woman-medium.webp" type="image/webp" media="(max-width: 600px)"/>
-      <img src="./images/woman.png" class="h-auto w-full aspect-video rounded-[10px] object-cover" alt="woman" loading="lazy"/>
-      </picture>  
-      <p id="blog-content-4" class="text-[14px] leading-[26px] uppercase text-[#1E0E62] dark:text-[#ffffffb3]">
-        There have not been any since
-      </p>
-    </div>
-    <div class="flex flex-col gap-[26px]">
-      <p id="blog-title-3" class="text-[22px] leading-[32px] font-medium text-[#1E0E62] dark:text-white">
-        The Fall Report
-      </p>
-
-      <p id="blog-content-5" class="text-[#1E0E62] dark:text-[#ffffffb3]">
-        This sounded nonsense to Alice, so she said nothing, but set off at
-        once toward the Red Queen. To her surprise, she lost sight of her in a
-        moment, and found herself walking in at the front-door again.
-      </p>
-      <ul id="blog-list" class="text-[18px] text-[#1E0E62] font-[500] flex flex-col gap-[31px] dark:text-white"></ul>
-        <li class="pl-[20px] flex items-center">
-          <i class="fa fa-dot-circle-o w-[16px] mr-[18px]" aria-hidden="true"></i>
-          <span id="blog-content-6">
-            Thus much I thought proper to tell you in relation to yourself,
-            and to the trust I reposed in you.
-          </span>
-        </li>
-        <li class="pl-[20px] flex items-center">
-          <i class="fa fa-dot-circle-o w-[16px] h-[14px] mr-[18px]" aria-hidden="true"></i>
-          <span id="blog-content-7">
-            So saying he unbuckled his baldric with the bugle, took a feather
-            from his cap, and gave them to Wamba.
-          </span>
-        </li>
-      </ul>
-      <div id="additional_Content" class="transition-all duration-500 ease-in-out hidden">
-        <div  class="flex flex-col">
+      <!---Hero Section-->
+      <section
+        class="body-font bg-[#2F1893] min-xl:px-[315px] min-xl:py-[100px] min-md:px-[200px] min-md:py-[100px] min-sm:px-[100px] px-[30px] py-[70px] flex flex-col gap-[157px]"
+      >
+        <div class="flex gap-[24px] flex-col">
+          <h1 id="hero-title" class="max-sm:text-3xl text-white">
+            How To Protect Computer.<br />Very Useful Tips
+          </h1>
+          <p id="hero-subtitle" class="text-[14px] text-white">
+            Splashproof Design
+          </p>
+        </div>
+        <div class="flex gap-[24px] items-center">
           <picture>
-            <source srcset="https://images.unsplash.com/photo-1737958108322-43b24ea9bc18?q=80&w=2500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" media="(min-width: 1250px)" />
-            <source srcset="https://images.unsplash.com/photo-1737958108322-43b24ea9bc18?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" media="(min-width: 950px)" />
-            <source srcset="https://images.unsplash.com/photo-1737958108322-43b24ea9bc18?q=80&w=700&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" media="(min-width: 700px)" />
-            <source srcset="https://images.unsplash.com/photo-1737958108322-43b24ea9bc18?q=80&w=500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" media="(max-width: 699px)" />
-            <img src="https://images.unsplash.com/photo-1737958108322-43b24ea9bc18?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="h-auto w-full aspect-video rounded-[10px] object-cover" alt="woman" loading="lazy"/>
+            <source
+              srcset="./images/Userpic@2x.png"
+              media="(min-width: 1024px)"
+            />
+            <source srcset="./images/Userpic.png" media="(min-width: 650px)" />
+            <img
+              src="./images/Userpic.png"
+              alt="hero-image"
+              width="100px"
+              height="100px"
+              class="max-sm:size-[70px] rounded-full"
+              loading="lazy"
+            />
           </picture>
-          <p id="blog-content-8" class="text-[#1E0E62] dark:text-[#ffffffb3] transition-all duration-500 ease-in-out"> She gave my mother such a turn, that I have always been convinced I am indebted to Miss Betsey for having been born on a Friday. The word was appropriate to the moment.</p></div>
-      </div>
-      <button id="showMore" class="h-[4opx] text-[#fff] bg-[#2F1893] w-fit mx-auto px-5 py-3 rounded-[10px] cursor-pointer transition-colors duration-500 ease-in-out hover:bg-black" onclick="handleShowMore(event)">
-        Show More
-      </button>
-      
-    </div>
-  </section>
-
-  <!---Caroussel Section-->
-  <section
-    class="min-xl:px-[315px] pb-[100px] min-md:px-[200px] py-[70px] min-sm:px-[100px] px-[30px] flex flex-col gap-[60px] dark:bg-black" id="carousel" dir="ltr">
-    <div class="relative  w-full min-lg:h-[500px] max-md:h-[300px] max-lg:h-[400px] ">
-      <div class="carousel-slide active">
-        <picture>
-          <source srcset="https://img.freepik.com/free-photo/island-seen-from-sea_1286-137.jpg?t=st=1739266228~exp=1739269828~hmac=32b9bd099e26bd3d6a28d7de9b63de54143610b8a37767371327369d75d874bf&w=1250" media="(min-width: 1250px)" />
-          <source srcset="https://img.freepik.com/free-photo/island-seen-from-sea_1286-137.jpg?t=st=1739266228~exp=1739269828~hmac=32b9bd099e26bd3d6a28d7de9b63de54143610b8a37767371327369d75d874bf&w=1000" media="(min-width: 950px)" />
-          <source srcset="https://img.freepik.com/free-photo/island-seen-from-sea_1286-137.jpg?t=st=1739266228~exp=1739269828~hmac=32b9bd099e26bd3d6a28d7de9b63de54143610b8a37767371327369d75d874bf&w=800" media="(min-width: 700px)" />
-          <source srcset="https://img.freepik.com/free-photo/island-seen-from-sea_1286-137.jpg?t=st=1739266228~exp=1739269828~hmac=32b9bd099e26bd3d6a28d7de9b63de54143610b8a37767371327369d75d874bf&w=600" media="(max-width: 699px)" />
-          <img src="https://img.freepik.com/free-photo/island-seen-from-sea_1286-137.jpg?t=st=1739266228~exp=1739269828~hmac=32b9bd099e26bd3d6a28d7de9b63de54143610b8a37767371327369d75d874bf&w=400" class="h-auto w-full aspect-video rounded-[10px] object-cover" alt="woman" loading="lazy"/>
-        </picture>
-      </div>
-      <div class="carousel-slide">
-        <picture>
-          <source srcset="https://img.freepik.com/free-photo/long-boat-blue-water-maya-bay-phi-phi-island-krabi-thailand_335224-895.jpg?t=st=1739266296~exp=1739269896~hmac=0a83ceb289f77b8906b155a45e3d0a19f1fe0f42cbe7869c6555626970cf9691&w=1250" media="(min-width: 1250px)" />
-          <source srcset="https://img.freepik.com/free-photo/long-boat-blue-water-maya-bay-phi-phi-island-krabi-thailand_335224-895.jpg?t=st=1739266296~exp=1739269896~hmac=0a83ceb289f77b8906b155a45e3d0a19f1fe0f42cbe7869c6555626970cf9691&w=1000" media="(min-width: 950px)" />
-          <source srcset="https://img.freepik.com/free-photo/long-boat-blue-water-maya-bay-phi-phi-island-krabi-thailand_335224-895.jpg?t=st=1739266296~exp=1739269896~hmac=0a83ceb289f77b8906b155a45e3d0a19f1fe0f42cbe7869c6555626970cf9691&w=800" media="(min-width: 700px)" />
-          <source srcset="https://img.freepik.com/free-photo/long-boat-blue-water-maya-bay-phi-phi-island-krabi-thailand_335224-895.jpg?t=st=1739266296~exp=1739269896~hmac=0a83ceb289f77b8906b155a45e3d0a19f1fe0f42cbe7869c6555626970cf9691&w=600" media="(max-width: 699px)" />
-          <img src="https://img.freepik.com/free-photo/long-boat-blue-water-maya-bay-phi-phi-island-krabi-thailand_335224-895.jpg?t=st=1739266296~exp=1739269896~hmac=0a83ceb289f77b8906b155a45e3d0a19f1fe0f42cbe7869c6555626970cf9691&w=400" class="h-auto w-full aspect-video rounded-[10px] object-cover" alt="woman" loading="lazy"/>
-        </picture>
-      </div>
-      <div class="carousel-slide">
-        <picture>
-          <source srcset="https://img.freepik.com/free-photo/landscape-tropical-vacation-palm-summer_1203-5352.jpg?t=st=1739266320~exp=1739269920~hmac=c5f206cec65d8b5418d42efb638efcf29b55a3ef02e50ad31270e6373c3d0211&w=1250" media="(min-width: 1250px)" />
-          <source srcset="https://img.freepik.com/free-photo/landscape-tropical-vacation-palm-summer_1203-5352.jpg?t=st=1739266320~exp=1739269920~hmac=c5f206cec65d8b5418d42efb638efcf29b55a3ef02e50ad31270e6373c3d0211&w=1000" media="(min-width: 950px)" />
-          <source srcset="https://img.freepik.com/free-photo/landscape-tropical-vacation-palm-summer_1203-5352.jpg?t=st=1739266320~exp=1739269920~hmac=c5f206cec65d8b5418d42efb638efcf29b55a3ef02e50ad31270e6373c3d0211&w=800" media="(min-width: 700px)" />
-          <source srcset="https://img.freepik.com/free-photo/landscape-tropical-vacation-palm-summer_1203-5352.jpg?t=st=1739266320~exp=1739269920~hmac=c5f206cec65d8b5418d42efb638efcf29b55a3ef02e50ad31270e6373c3d0211&w=600" media="(max-width: 699px)" />
-          <img src="https://img.freepik.com/free-photo/landscape-tropical-vacation-palm-summer_1203-5352.jpg?t=st=1739266320~exp=1739269920~hmac=c5f206cec65d8b5418d42efb638efcf29b55a3ef02e50ad31270e6373c3d0211&w=400" class="h-auto w-full aspect-video rounded-[10px] object-cover" alt="woman" loading="lazy"/>
-        </picture>
-      </div>
-
-      <button class="carousel-btn prev">❮</button>
-      <button class="carousel-btn next">❯</button>
-
-      <div class="carousel-dots"></div>
-    </div>
-  </section>
-
-  <!---Form Section-->
-  <section
-    class="min-xl:px-[315px] pb-[100px] min-md:px-[200px] py-[70px] min-sm:px-[100px] px-[30px] flex flex-col gap-[60px] dark:bg-black" id="form">
-    <div class="flex flex-col gap-[26px]">
-      <p id="contact-title" class="text-[42px] max-sm:text-3xl leading-[52px] font-bold text-[#1E0E62] dark:text-white">
-        Contact Us
-      </p>
-      <p id="contact-description" class="text-[#1E0E62] dark:text-[#ffffffb3]">
-        This sounded nonsense to Alice, so she said nothing, but set off at
-        once toward the Red Queen. To her surprise, she lost sight of her in a
-        moment, and found herself walking in at the front-door again.
-      </p>
-    </div>
-    <form class="flex flex-col gap-[26px]" onsubmit="handleSubmit(event)">
-      <div class="flex gap-[10px] max-lg:flex-col w-full">
-        <div class="flex flex-col gap-[10px] w-full">
-          <label id="form-field1" for="FirstName" class="text-[#1E0E62] dark:text-[#ffffffb3]">First Name</label>
-          <input type="text" id="FirstName" name="Firstname"
-            class="border-[1px] border-[#1E0E62] dark:border-[#ffffffb3] rounded-[5px] p-[10px] dark:bg-[#1E1E1E] dark:text-white" />
-            <p class="text-red-600 text-[12px] hidden" id="error1">First Name is required</p>
-        </div>
-        <div class="flex flex-col gap-[10px] w-full">
-          <label id="form-field2" for="LastName" class="text-[#1E0E62] dark:text-[#ffffffb3]">Last Name</label>
-          <input type="text" id="LastName" name="Lastname"
-            class="border-[1px] border-[#1E0E62] dark:border-[#ffffffb3] rounded-[5px] p-[10px] dark:bg-[#1E1E1E] dark:text-white" />
-            <p class="text-red-600 text-[12px] hidden" id="error2">Last Name is required</p>
-
-        </div>
-      </div>
-      <div class="flex flex-col gap-[10px]">
-        <label id="form-field3" for="email" class="text-[#1E0E62] dark:text-[#ffffffb3]">Email</label>
-        <input type="email" id="email" name="email"
-          class="border-[1px] border-[#1E0E62] dark:border-[#ffffffb3] rounded-[5px] p-[10px] dark:bg-[#1E1E1E] dark:text-white" />
-          <p class="text-red-600 text-[12px] hidden" id="error3">Email is required</p>
-
-      </div>
-      <div class="flex flex-col gap-[10px]">
-        <label id="form-field4" for="message" class="text-[#1E0E62] dark:text-[#ffffffb3]">Message</label>
-        <textarea id="message" rows="4" name="message"
-          class="border-[1px] border-[#1E0E62] dark:border-[#ffffffb3] rounded-[5px] p-[10px] dark:bg-[#1E1E1E] dark:text-white"></textarea>
-          <p class="text-red-600 text-[12px] hidden" id="error4">Message is required</p>
-
-      </div>
-      <button id="button" type="submit"
-        class="bg-[#2F1893] cursor-pointer h-[45px] text-white rounded hover:bg-[#1E0E62] transition-colors duration-300">Submit</button>
-    </form>
-  </section>
-  
-  <section class="min-xl:px-[315px] pb-[100px] min-md:px-[200px] py-[70px] min-sm:px-[100px] px-[30px] flex flex-col gap-[60px] dark:bg-black" id="TestimonialSection" dir="ltr">
-    <div  class="relative w-full mx-auto overflow-hidden">
-      <div id="testimonial-carousel" class="flex transition-transform duration-500 ease-in-out">
-        <!-- Testimonial 1 -->
-        <div class="min-w-full p-6  rounded-lg text-center">
-          <p id="testtimonial1" class="text-black dark:text-[#fff] italic">"This service exceeded my expectations. Highly recommended!"</p>
-          <div class="mt-4 flex justify-center">
-            <img src="https://img.freepik.com/photos-gratuite/portrait-femme-blonde-souriante_23-2148316635.jpg?t=st=1739286679~exp=1739290279~hmac=088487730bf7b37cd11fb93c147569e136e0c8b5312ac34a91d992b8ebf10719&w=1480" alt="User" class="size-[60px] rounded-full object-cover">
+          <div class="flex flex-col gap-[5px]">
+            <p
+              id="hero-author"
+              class="uppercase text-[14px] leading-[26px] text-white"
+            >
+              Samuel Audlev
+            </p>
+            <p
+              id="hero-description"
+              class="uppercase text-[14px] max-sm:text-[12px] text-[#ffffffd4] leading-[26px]"
+            >
+              Saving the world. Shaping the world.
+            </p>
+            <div class="flex gap-[20px] text-white">
+              <i class="fa fa-twitter cursor-pointer" aria-hidden="true"></i>
+              <i class="fa fa-facebook cursor-pointer" aria-hidden="true"></i>
+              <i class="fa fa-dribbble cursor-pointer" aria-hidden="true"></i>
+              <i class="fa fa-instagram cursor-pointer" aria-hidden="true"></i>
+            </div>
           </div>
-          <p class="mt-2 font-semibold dark:text-[#fff]">John Doe</p>
         </div>
-        <!-- Testimonial 2 -->
-        <div class="min-w-full p-6 rounded-lg text-center">
-          <p id="testtimonial2" class="text-black dark:text-[#fff] italic">"Amazing experience! The team was professional and efficient."</p>
-          <div class="mt-4 flex justify-center">
-            <img src="https://img.freepik.com/photos-gratuite/tour-taille-jeune-femme-europeenne-attrayante-positive-employee-etudiant-portant-du-rouge-levres-lunettes-ovales-souriant-confiance-gardant-bras-croises-posant-isole_344912-548.jpg?t=st=1739286712~exp=1739290312~hmac=addfa96cabcafb23c59e8a9619ce2b23ecab5a3c1746a9fc8d554203c80a01bb&w=2000" alt="User" class="size-[60px] rounded-full object-cover">
-          </div>
-          <p class="mt-2 font-semibold dark:text-[#fff]">Jane Smith</p>
-        </div>
-        <!-- Testimonial 3 -->
-        <div class="min-w-full p-6 rounded-lg text-center">
-          <p id="testtimonial3" class="text-black dark:text-[#fff] italic">"A fantastic product that I will definitely use again!"</p>
-          <div class="mt-4 flex justify-center">
-            <img src="https://img.freepik.com/photos-gratuite/portrait-jeune-homme-beau-modele-souriant-vetu-vetements-gris-capuche-decontracte-posant-mur-blanc-isole_158538-6978.jpg?t=st=1739286741~exp=1739290341~hmac=fe790e7da5ff742ede8eb7338da6e8651e90f3ee3cbfeed5cf25390ebec9fd54&w=2000" alt="User" class="size-[60px] rounded-full object-cover">
-          </div>
-          <p class="mt-2 font-semibold dark:text-[#fff]">Alex Brown</p>
-        </div>
-      </div>
-      <!-- Navigation Buttons -->
-      <button id="prev-btn" class="cursor-pointer absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-200  rounded-full size-7 hover:bg-[#2F1893] text-white transition-all duration-500 ease-in-out ">❮</button>
-      <button id="next-btn" class="cursor-pointer absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-200 rounded-full size-7 hover:bg-[#2F1893] text-white transition-all duration-500 ease-in-out ">❯</button>
-    </div>
-  </section>
+      </section>
 
-  <!---Newsletter Section Injected using JS-->
-  <script src="./newsletter.js"></script>
-  <script src="./main.js"></script>
-</body>
+      <!---Blog Section-->
+      <section
+        id="blogSection"
+        class="min-xl:px-[315px] h-fit min-xl:pt-[100px] min-md:px-[200px] pt-[70px] pb-[10px] min-sm:px-[100px] px-[30px] flex flex-col gap-[60px] bg-white dark:bg-black dark:text-white"
+      >
+        <div class="flex flex-col gap-[26px]">
+          <h2
+            id="blog-title-1"
+            class="max-sm:text-3xl text-[#1E0E62] dark:text-white"
+          >
+            Branding
+          </h2>
 
+          <p id="blog-content-1" class="text-[#1E0E62] dark:text-[#ffffffb3]">
+            This sounded nonsense to Alice, so she said nothing, but set off at
+            once toward the Red Queen. To her surprise, she lost sight of her in
+            a moment, and found herself walking in at the front-door again.
+          </p>
+          <p id="blog-content-2" class="text-[#1E0E62] dark:text-[#ffffffb3]">
+            For some minutes Alice stood without speaking, looking out in all
+            directions over the country - and a most curious country it was.
+            There were a number of tiny little brooks running straight across it
+            from side to side, and the ground between was divided up into
+            squares by a number of little.
+          </p>
+        </div>
+        <div class="flex flex-col gap-[26px]">
+          <h4 id="blog-title-2" class="text-[#1E0E62] dark:text-white">
+            Perfect for Your
+          </h4>
+
+          <p id="blog-content-3" class="text-[#1E0E62] dark:text-[#ffffffb3]">
+            She gave my mother such a turn, that I have always been convinced I
+            am indebted to Miss Betsey for having been born on a Friday. The
+            word was appropriate to the moment.
+          </p>
+          <picture>
+            <source
+              srcset="./images/woman.png"
+              type="image/png"
+              media="(min-width: 1250px)"
+            />
+            <source
+              srcset="./images/Woman-large.webp"
+              type="image/webp"
+              media="(min-width: 1024px)"
+            />
+            <source
+              srcset="./images/Woman-medium.webp"
+              type="image/webp"
+              media="(max-width: 600px)"
+            />
+            <img
+              src="./images/woman.png"
+              class="h-auto w-full aspect-video rounded-[10px] object-cover"
+              alt="woman"
+              loading="lazy"
+            />
+          </picture>
+          <p
+            id="blog-content-4"
+            class="text-[14px] leading-[26px] uppercase text-[#1E0E62] dark:text-[#ffffffb3]"
+          >
+            There have not been any since
+          </p>
+        </div>
+        <div class="flex flex-col gap-[26px]">
+          <h4 id="blog-title-3" class="text-[#1E0E62] dark:text-white">
+            The Fall Report
+          </h4>
+
+          <p id="blog-content-5" class="text-[#1E0E62] dark:text-[#ffffffb3]">
+            This sounded nonsense to Alice, so she said nothing, but set off at
+            once toward the Red Queen. To her surprise, she lost sight of her in
+            a moment, and found herself walking in at the front-door again.
+          </p>
+          <ul
+            id="blog-list"
+            class="text-[18px] text-[#1E0E62] font-[500] flex flex-col gap-[31px] dark:text-white"
+          >
+            <li class="pl-[20px] flex items-center">
+              <i
+                class="fa fa-dot-circle-o w-[16px] mr-[18px]"
+                aria-hidden="true"
+              ></i>
+              <span id="blog-content-6">
+                Thus much I thought proper to tell you in relation to yourself,
+                and to the trust I reposed in you.
+              </span>
+            </li>
+            <li class="pl-[20px] flex items-center">
+              <i
+                class="fa fa-dot-circle-o w-[16px] h-[14px] mr-[18px]"
+                aria-hidden="true"
+              ></i>
+              <span id="blog-content-7">
+                So saying he unbuckled his baldric with the bugle, took a
+                feather from his cap, and gave them to Wamba.
+              </span>
+            </li>
+          </ul>
+          <div
+            id="additional_Content"
+            class="transition-all duration-500 ease-in-out hidden"
+          >
+            <div class="flex flex-col">
+              <picture>
+                <source
+                  srcset="
+                    https://images.unsplash.com/photo-1737958108322-43b24ea9bc18?q=80&w=2500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+                  "
+                  media="(min-width: 1250px)"
+                />
+                <source
+                  srcset="
+                    https://images.unsplash.com/photo-1737958108322-43b24ea9bc18?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+                  "
+                  media="(min-width: 950px)"
+                />
+                <source
+                  srcset="
+                    https://images.unsplash.com/photo-1737958108322-43b24ea9bc18?q=80&w=700&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+                  "
+                  media="(min-width: 700px)"
+                />
+                <source
+                  srcset="
+                    https://images.unsplash.com/photo-1737958108322-43b24ea9bc18?q=80&w=500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+                  "
+                  media="(max-width: 699px)"
+                />
+                <img
+                  src="https://images.unsplash.com/photo-1737958108322-43b24ea9bc18?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  class="h-auto w-full aspect-video rounded-[10px] object-cover"
+                  alt="woman"
+                  loading="lazy"
+                />
+              </picture>
+              <p
+                id="blog-content-8"
+                class="text-[#1E0E62] dark:text-[#ffffffb3] transition-all duration-500 ease-in-out"
+              >
+                She gave my mother such a turn, that I have always been
+                convinced I am indebted to Miss Betsey for having been born on a
+                Friday. The word was appropriate to the moment.
+              </p>
+            </div>
+          </div>
+          <button
+            id="showMore"
+            class="h-[4opx] text-[#fff] bg-[#2F1893] w-fit mx-auto px-5 py-3 rounded-[10px] cursor-pointer transition-colors duration-500 ease-in-out hover:bg-black"
+            onclick="handleShowMore(event)"
+          >
+            Show More
+          </button>
+        </div>
+      </section>
+
+      <!---Caroussel Pictures Section-->
+      <section
+        class="min-xl:px-[315px] pb-[100px] min-md:px-[200px] py-[70px] min-sm:px-[100px] px-[30px] flex flex-col gap-[60px] dark:bg-black carousel-container carousel-pictures"
+        dir="ltr"
+      >
+        <div
+          class="relative w-full min-lg:h-[500px] max-md:h-[300px] max-lg:h-[400px]"
+        >
+          <div class="carousel-slide active">
+            <picture>
+              <source
+                srcset="
+                  https://img.freepik.com/free-photo/island-seen-from-sea_1286-137.jpg?t=st=1739266228~exp=1739269828~hmac=32b9bd099e26bd3d6a28d7de9b63de54143610b8a37767371327369d75d874bf&w=1250
+                "
+                media="(min-width: 1250px)"
+              />
+              <source
+                srcset="
+                  https://img.freepik.com/free-photo/island-seen-from-sea_1286-137.jpg?t=st=1739266228~exp=1739269828~hmac=32b9bd099e26bd3d6a28d7de9b63de54143610b8a37767371327369d75d874bf&w=1000
+                "
+                media="(min-width: 950px)"
+              />
+              <source
+                srcset="
+                  https://img.freepik.com/free-photo/island-seen-from-sea_1286-137.jpg?t=st=1739266228~exp=1739269828~hmac=32b9bd099e26bd3d6a28d7de9b63de54143610b8a37767371327369d75d874bf&w=800
+                "
+                media="(min-width: 700px)"
+              />
+              <source
+                srcset="
+                  https://img.freepik.com/free-photo/island-seen-from-sea_1286-137.jpg?t=st=1739266228~exp=1739269828~hmac=32b9bd099e26bd3d6a28d7de9b63de54143610b8a37767371327369d75d874bf&w=600
+                "
+                media="(max-width: 699px)"
+              />
+              <img
+                src="https://img.freepik.com/free-photo/island-seen-from-sea_1286-137.jpg?t=st=1739266228~exp=1739269828~hmac=32b9bd099e26bd3d6a28d7de9b63de54143610b8a37767371327369d75d874bf&w=400"
+                class="!h-full w-full aspect-video rounded-[10px] object-cover"
+                alt="woman"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+          <div class="carousel-slide">
+            <picture>
+              <source
+                srcset="
+                  https://img.freepik.com/free-photo/long-boat-blue-water-maya-bay-phi-phi-island-krabi-thailand_335224-895.jpg?t=st=1739266296~exp=1739269896~hmac=0a83ceb289f77b8906b155a45e3d0a19f1fe0f42cbe7869c6555626970cf9691&w=1250
+                "
+                media="(min-width: 1250px)"
+              />
+              <source
+                srcset="
+                  https://img.freepik.com/free-photo/long-boat-blue-water-maya-bay-phi-phi-island-krabi-thailand_335224-895.jpg?t=st=1739266296~exp=1739269896~hmac=0a83ceb289f77b8906b155a45e3d0a19f1fe0f42cbe7869c6555626970cf9691&w=1000
+                "
+                media="(min-width: 950px)"
+              />
+              <source
+                srcset="
+                  https://img.freepik.com/free-photo/long-boat-blue-water-maya-bay-phi-phi-island-krabi-thailand_335224-895.jpg?t=st=1739266296~exp=1739269896~hmac=0a83ceb289f77b8906b155a45e3d0a19f1fe0f42cbe7869c6555626970cf9691&w=800
+                "
+                media="(min-width: 700px)"
+              />
+              <source
+                srcset="
+                  https://img.freepik.com/free-photo/long-boat-blue-water-maya-bay-phi-phi-island-krabi-thailand_335224-895.jpg?t=st=1739266296~exp=1739269896~hmac=0a83ceb289f77b8906b155a45e3d0a19f1fe0f42cbe7869c6555626970cf9691&w=600
+                "
+                media="(max-width: 699px)"
+              />
+              <img
+                src="https://img.freepik.com/free-photo/long-boat-blue-water-maya-bay-phi-phi-island-krabi-thailand_335224-895.jpg?t=st=1739266296~exp=1739269896~hmac=0a83ceb289f77b8906b155a45e3d0a19f1fe0f42cbe7869c6555626970cf9691&w=400"
+                class="!h-full w-full aspect-video rounded-[10px] object-cover"
+                alt="woman"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+          <div class="carousel-slide">
+            <picture>
+              <source
+                srcset="
+                  https://img.freepik.com/free-photo/landscape-tropical-vacation-palm-summer_1203-5352.jpg?t=st=1739266320~exp=1739269920~hmac=c5f206cec65d8b5418d42efb638efcf29b55a3ef02e50ad31270e6373c3d0211&w=1250
+                "
+                media="(min-width: 1250px)"
+              />
+              <source
+                srcset="
+                  https://img.freepik.com/free-photo/landscape-tropical-vacation-palm-summer_1203-5352.jpg?t=st=1739266320~exp=1739269920~hmac=c5f206cec65d8b5418d42efb638efcf29b55a3ef02e50ad31270e6373c3d0211&w=1000
+                "
+                media="(min-width: 950px)"
+              />
+              <source
+                srcset="
+                  https://img.freepik.com/free-photo/landscape-tropical-vacation-palm-summer_1203-5352.jpg?t=st=1739266320~exp=1739269920~hmac=c5f206cec65d8b5418d42efb638efcf29b55a3ef02e50ad31270e6373c3d0211&w=800
+                "
+                media="(min-width: 700px)"
+              />
+              <source
+                srcset="
+                  https://img.freepik.com/free-photo/landscape-tropical-vacation-palm-summer_1203-5352.jpg?t=st=1739266320~exp=1739269920~hmac=c5f206cec65d8b5418d42efb638efcf29b55a3ef02e50ad31270e6373c3d0211&w=600
+                "
+                media="(max-width: 699px)"
+              />
+              <img
+                src="https://img.freepik.com/free-photo/landscape-tropical-vacation-palm-summer_1203-5352.jpg?t=st=1739266320~exp=1739269920~hmac=c5f206cec65d8b5418d42efb638efcf29b55a3ef02e50ad31270e6373c3d0211&w=400"
+                class="!h-full w-full aspect-video rounded-[10px] object-cover"
+                alt="woman"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+
+          <button class="prev">❮</button>
+          <button class="next">❯</button>
+
+          <div class="carousel-dots"></div>
+        </div>
+      </section>
+
+      <!---Form Section-->
+      <section
+        class="min-xl:px-[315px] pb-[100px] min-md:px-[200px] py-[70px] min-sm:px-[100px] px-[30px] flex flex-col gap-[60px] dark:bg-black"
+        id="form"
+      >
+        <div class="flex flex-col gap-[26px]">
+          <h2
+            id="contact-title"
+            class="max-sm:text-3xl text-[#1E0E62] dark:text-white"
+          >
+            Contact Us
+          </h2>
+          <p
+            id="contact-description"
+            class="text-[#1E0E62] dark:text-[#ffffffb3]"
+          >
+            This sounded nonsense to Alice, so she said nothing, but set off at
+            once toward the Red Queen. To her surprise, she lost sight of her in
+            a moment, and found herself walking in at the front-door again.
+          </p>
+        </div>
+        <form class="flex flex-col gap-[26px]" id="contact-form">
+          <div class="flex gap-[10px] max-lg:flex-col w-full">
+            <div class="flex flex-col gap-[10px] w-full">
+              <label
+                id="form-field1"
+                for="FirstName"
+                class="text-[#1E0E62] dark:text-[#ffffffb3]"
+                >First Name</label
+              >
+              <input
+                type="text"
+                id="FirstName"
+                name="Firstname"
+                class="border-[1px] border-[#1E0E62] dark:border-[#ffffffb3] rounded-[5px] p-[10px] dark:bg-[#1E1E1E] dark:text-white"
+              />
+              <p class="text-red-600 text-[12px] hidden" id="error1">
+                First Name is required
+              </p>
+            </div>
+            <div class="flex flex-col gap-[10px] w-full">
+              <label
+                id="form-field2"
+                for="LastName"
+                class="text-[#1E0E62] dark:text-[#ffffffb3]"
+                >Last Name</label
+              >
+              <input
+                type="text"
+                id="LastName"
+                name="Lastname"
+                class="border-[1px] border-[#1E0E62] dark:border-[#ffffffb3] rounded-[5px] p-[10px] dark:bg-[#1E1E1E] dark:text-white"
+              />
+              <p class="text-red-600 text-[12px] hidden" id="error2">
+                Last Name is required
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-col gap-[10px]">
+            <label
+              id="form-field3"
+              for="email"
+              class="text-[#1E0E62] dark:text-[#ffffffb3]"
+              >Email</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="border-[1px] border-[#1E0E62] dark:border-[#ffffffb3] rounded-[5px] p-[10px] dark:bg-[#1E1E1E] dark:text-white"
+            />
+            <p class="text-red-600 text-[12px] hidden" id="error3">
+              Email is required
+            </p>
+          </div>
+          <div class="flex flex-col gap-[10px]">
+            <label
+              id="form-field4"
+              for="message"
+              class="text-[#1E0E62] dark:text-[#ffffffb3]"
+              >Message</label
+            >
+            <textarea
+              id="message"
+              rows="4"
+              name="message"
+              class="border-[1px] border-[#1E0E62] dark:border-[#ffffffb3] rounded-[5px] p-[10px] dark:bg-[#1E1E1E] dark:text-white"
+            ></textarea>
+            <p class="text-red-600 text-[12px] hidden" id="error4">
+              Message is required
+            </p>
+          </div>
+          <button
+            id="button"
+            type="submit"
+            class="bg-[#2F1893] cursor-pointer h-[45px] text-white rounded hover:bg-[#1E0E62] transition-colors duration-300"
+          >
+            Submit
+          </button>
+          <p id="successMessage" class="text-green-600 text-[16px] hidden">
+            Your message has been sent successfully!
+          </p>
+        </form>
+      </section>
+
+      <!-- Testimonials Carousel Section -->
+      <section
+        class="min-xl:px-[315px] pb-[100px] min-md:px-[200px] py-[70px] min-sm:px-[100px] px-[30px] flex flex-col gap-[60px] dark:bg-black carousel-container carousel-testimonials"
+        id="TestimonialSection"
+        dir="ltr"
+      >
+        <div
+          class="relative w-full min-lg:h-[500px] max-md:h-[300px] max-lg:h-[400px] overflow-hidden"
+        >
+          <div
+            class="flex h-full w-full transition-transform duration-500 ease-in-out"
+          >
+            <!-- Testimonial 1 -->
+            <div
+              class="w-full !flex !flex-col !justify-center h-full p-6 rounded-lg text-center carousel-slide active"
+            >
+              <p
+                id="testimonial1"
+                class="text-black text-[18px] font-medium dark:text-[#fff] italic"
+              >
+                "This service exceeded my expectations. Highly recommended!"
+              </p>
+              <div class="mt-4 flex justify-center">
+                <img
+                  src="https://img.freepik.com/photos-gratuite/portrait-femme-blonde-souriante_23-2148316635.jpg?t=st=1739286679~exp=1739290279~hmac=088487730bf7b37cd11fb93c147569e136e0c8b5312ac34a91d992b8ebf10719&w=1480"
+                  alt="User"
+                  class="!size-[60px] !rounded-full object-cover"
+                />
+              </div>
+              <p class="mt-2 font-normal text-[15px] dark:text-[#fff]">
+                John Doe
+              </p>
+            </div>
+            <!-- Testimonial 2 -->
+            <div
+              class="w-full !flex !flex-col !justify-center p-6 rounded-lg text-center carousel-slide"
+            >
+              <p
+                id="testimonial2"
+                class="text-black text-[18px] font-medium dark:text-[#fff] italic"
+              >
+                "Amazing experience! The team was professional and efficient."
+              </p>
+              <div class="mt-4 flex justify-center">
+                <img
+                  src="https://img.freepik.com/photos-gratuite/tour-taille-jeune-femme-europeenne-attrayante-positive-employee-etudiant-portant-du-rouge-levres-lunettes-ovales-souriant-confiance-gardant-bras-croises-posant-isole_344912-548.jpg?t=st=1739286712~exp=1739290312~hmac=addfa96cabcafb23c59e8a9619ce2b23ecab5a3c1746a9fc8d554203c80a01bb&w=2000"
+                  alt="User"
+                  class="!size-[60px] !rounded-full object-cover"
+                />
+              </div>
+              <p class="mt-2 font-normal text-[15px] dark:text-[#fff]">
+                Jane Smith
+              </p>
+            </div>
+            <!-- Testimonial 3 -->
+            <div
+              class="w-full !flex !flex-col !justify-center p-6 rounded-lg text-center carousel-slide"
+            >
+              <p
+                id="testimonial3"
+                class="text-black text-[18px] font-medium dark:text-[#fff] italic"
+              >
+                "A fantastic product that I will definitely use again!"
+              </p>
+              <div class="mt-4 flex justify-center">
+                <img
+                  src="https://img.freepik.com/photos-gratuite/portrait-jeune-homme-beau-modele-souriant-vetu-vetements-gris-capuche-decontracte-posant-mur-blanc-isole_158538-6978.jpg?t=st=1739286741~exp=1739290341~hmac=fe790e7da5ff742ede8eb7338da6e8651e90f3ee3cbfeed5cf25390ebec9fd54&w=2000"
+                  alt="User"
+                  class="!size-[60px] !rounded-full object-cover"
+                />
+              </div>
+              <p class="mt-2 font-normal text-[15px] dark:text-[#fff]">
+                Alex Brown
+              </p>
+            </div>
+          </div>
+          <!-- Navigation Buttons -->
+          <button class="prev">❮</button>
+          <button class="next">❯</button>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
