@@ -86,8 +86,8 @@
             إنجليزي
           </a>
           <i
+          id="darkModeHandler"
             class="fa fa-2x fa-toggle-off text-white cursor-pointer"
-            onclick="handleDarkMode(event)"
             aria-hidden="true"
           ></i>
         </div>
@@ -101,12 +101,12 @@
         class="body-font bg-[#2F1893] min-xl:px-[315px] min-xl:py-[100px] min-md:px-[200px] min-md:py-[100px] min-sm:px-[100px] px-[30px] py-[70px] flex flex-col gap-[157px]"
       >
         <div class="flex gap-[24px] flex-col">
-          <h2
+          <h1
             id="hero-title"
             class="text-[58px] text-white font-bold max-sm:text-3xl"
           >
             كيفية حماية الكمبيوتر.<br />نصائح مفيدة جدا
-          </h2>
+          </h1>
           <p id="hero-subtitle" class="text-[14px] text-white">
             تصميم مقاوم للرذاذ
           </p>
@@ -114,16 +114,13 @@
         <div class="flex gap-[24px] items-center">
           <picture>
             <source
-              srcset="./images/Userpic@2x.png"
-              media="(min-width: 1024px)"
+              srcset="./images/Userpic.webp"
+              type="image/webp"
             />
-            <source srcset="./images/Userpic.png" media="(min-width: 650px)" />
             <img
               src="./images/Userpic.png"
               alt="hero-image"
-              width="100px"
-              height="100px"
-              class="max-sm:size-[70px] rounded-full"
+              class="max-sm:size-[70px] size-[140px] rounded-full"
               loading="lazy"
             />
           </picture>
@@ -155,12 +152,12 @@
         class="min-xl:px-[315px] h-fit min-xl:pt-[100px] min-md:px-[200px] pt-[70px] pb-[10px] min-sm:px-[100px] px-[30px] flex flex-col gap-[60px] bg-white dark:bg-black dark:text-white"
       >
         <div class="flex flex-col gap-[26px]">
-          <p
+          <h2
             id="blog-title-1"
             class="text-[42px] max-sm:text-3xl leading-[52px] font-bold text-[#1E0E62] dark:text-white"
           >
             العلامة التجارية
-          </p>
+          </h2>
 
           <p id="blog-content-1" class="text-[#1E0E62] dark:text-[#ffffffb3]">
             بدا هذا الكلام هراءً لأليس، فلم تقل شيئًا، لكنها انطلقت على الفور
@@ -175,12 +172,12 @@
           </p>
         </div>
         <div class="flex flex-col gap-[26px]">
-          <p
+          <h3
             id="blog-title-2"
             class="text-[22px] leading-[32px] font-medium text-[#1E0E62] dark:text-white"
           >
             مثالي لك
-          </p>
+          </h3>
 
           <p
             id="blog-content-3"
@@ -221,12 +218,12 @@
           </p>
         </div>
         <div class="flex flex-col gap-[26px]">
-          <p
+          <h3
             id="blog-title-3"
             class="text-[22px] leading-[32px] font-medium text-[#1E0E62] dark:text-white"
           >
             تقرير الخريف
-          </p>
+          </h3>
 
           <p id="blog-content-5" class="text-[#1E0E62] dark:text-[#ffffffb3]">
             بدا هذا الكلام هراءً لأليس، فلم تقل شيئًا، لكنها انطلقت على الفور
@@ -308,7 +305,6 @@
         <button
           id="showMore"
           class="h-[4opx] text-[#fff] bg-[#2F1893] w-fit mx-auto px-5 py-3 rounded-[10px] cursor-pointer transition-colors duration-500 ease-in-out hover:bg-black"
-          onclick="handleShowMore(event)"
         >
           عرض المزيد
         </button>
@@ -436,12 +432,12 @@
         id="form"
       >
         <div class="flex flex-col gap-[26px]">
-          <p
+          <h2
             id="contact-title"
             class="text-[42px] max-sm:text-3xl leading-[52px] font-bold text-[#1E0E62] dark:text-white"
           >
             اتصل بنا
-          </p>
+          </h2>
           <p
             id="contact-description"
             class="text-[#1E0E62] dark:text-[#ffffffb3]"
@@ -558,11 +554,38 @@
                 "هذه الخدمة تجاوزت توقعاتي. أوصي بها بشدة!"
               </p>
               <div class="mt-4 flex justify-center">
-                <img
-                  src="https://img.freepik.com/photos-gratuite/portrait-femme-blonde-souriante_23-2148316635.jpg?t=st=1739286679~exp=1739290279~hmac=088487730bf7b37cd11fb93c147569e136e0c8b5312ac34a91d992b8ebf10719&w=1480"
-                  alt="User"
-                  class="!size-[60px] !rounded-full object-cover"
-                />
+                <picture>
+                  <source
+                    srcset="
+                    https://img.freepik.com/photos-gratuite/portrait-femme-blonde-souriante_23-2148316635.jpg?t=st=1739286679~exp=1739290279~hmac=088487730bf7b37cd11fb93c147569e136e0c8b5312ac34a91d992b8ebf10719&w=900
+                    "
+                    media="(min-width: 1250px)"
+                  />
+                  <source
+                    srcset="
+                    https://img.freepik.com/photos-gratuite/portrait-femme-blonde-souriante_23-2148316635.jpg?t=st=1739286679~exp=1739290279~hmac=088487730bf7b37cd11fb93c147569e136e0c8b5312ac34a91d992b8ebf10719&w=800
+                    "
+                    media="(min-width: 950px)"
+                  />
+                  <source
+                    srcset="
+                    https://img.freepik.com/photos-gratuite/portrait-femme-blonde-souriante_23-2148316635.jpg?t=st=1739286679~exp=1739290279~hmac=088487730bf7b37cd11fb93c147569e136e0c8b5312ac34a91d992b8ebf10719&w=600
+                    "
+                    media="(min-width: 700px)"
+                  />
+                  <source
+                    srcset="
+                    https://img.freepik.com/photos-gratuite/portrait-femme-blonde-souriante_23-2148316635.jpg?t=st=1739286679~exp=1739290279~hmac=088487730bf7b37cd11fb93c147569e136e0c8b5312ac34a91d992b8ebf10719&w=400
+                    "
+                    media="(max-width: 699px)"
+                  />
+                  <img
+                    src="https://img.freepik.com/photos-gratuite/portrait-femme-blonde-souriante_23-2148316635.jpg?t=st=1739286679~exp=1739290279~hmac=088487730bf7b37cd11fb93c147569e136e0c8b5312ac34a91d992b8ebf10719&w=600"
+                    class="!size-[60px] !rounded-full object-cover"
+                    alt="User"
+                    loading="lazy"
+                  />
+                </picture>
               </div>
               <p class="mt-2 font-normal text-[15px] dark:text-[#fff]">جون دو</p>
             </div>
@@ -574,11 +597,38 @@
                 "تجربة مذهلة! كان الفريق محترفًا وفعالًا."
               </p>
               <div class="mt-4 flex justify-center">
-                <img
-                  src="https://img.freepik.com/photos-gratuite/tour-taille-jeune-femme-europeenne-attrayante-positive-employee-etudiant-portant-du-rouge-levres-lunettes-ovales-souriant-confiance-gardant-bras-croises-posant-isole_344912-548.jpg?t=st=1739286712~exp=1739290312~hmac=addfa96cabcafb23c59e8a9619ce2b23ecab5a3c1746a9fc8d554203c80a01bb&w=2000"
-                  alt="User"
-                  class="!size-[60px] !rounded-full object-cover"
-                />
+                <picture>
+                  <source
+                    srcset="
+                    https://img.freepik.com/photos-gratuite/tour-taille-jeune-femme-europeenne-attrayante-positive-employee-etudiant-portant-du-rouge-levres-lunettes-ovales-souriant-confiance-gardant-bras-croises-posant-isole_344912-548.jpg?t=st=1739286712~exp=1739290312~hmac=addfa96cabcafb23c59e8a9619ce2b23ecab5a3c1746a9fc8d554203c80a01bb&w=900
+                    "
+                    media="(min-width: 1250px)"
+                  />
+                  <source
+                    srcset="
+                    https://img.freepik.com/photos-gratuite/tour-taille-jeune-femme-europeenne-attrayante-positive-employee-etudiant-portant-du-rouge-levres-lunettes-ovales-souriant-confiance-gardant-bras-croises-posant-isole_344912-548.jpg?t=st=1739286712~exp=1739290312~hmac=addfa96cabcafb23c59e8a9619ce2b23ecab5a3c1746a9fc8d554203c80a01bb&w=800
+                    "
+                    media="(min-width: 950px)"
+                  />
+                  <source
+                    srcset="
+                    https://img.freepik.com/photos-gratuite/tour-taille-jeune-femme-europeenne-attrayante-positive-employee-etudiant-portant-du-rouge-levres-lunettes-ovales-souriant-confiance-gardant-bras-croises-posant-isole_344912-548.jpg?t=st=1739286712~exp=1739290312~hmac=addfa96cabcafb23c59e8a9619ce2b23ecab5a3c1746a9fc8d554203c80a01bb&w=600
+                    "
+                    media="(min-width: 700px)"
+                  />
+                  <source
+                    srcset="
+                    https://img.freepik.com/photos-gratuite/tour-taille-jeune-femme-europeenne-attrayante-positive-employee-etudiant-portant-du-rouge-levres-lunettes-ovales-souriant-confiance-gardant-bras-croises-posant-isole_344912-548.jpg?t=st=1739286712~exp=1739290312~hmac=addfa96cabcafb23c59e8a9619ce2b23ecab5a3c1746a9fc8d554203c80a01bb&w=400
+                    "
+                    media="(max-width: 699px)"
+                  />
+                  <img
+                    src="https://img.freepik.com/photos-gratuite/tour-taille-jeune-femme-europeenne-attrayante-positive-employee-etudiant-portant-du-rouge-levres-lunettes-ovales-souriant-confiance-gardant-bras-croises-posant-isole_344912-548.jpg?t=st=1739286712~exp=1739290312~hmac=addfa96cabcafb23c59e8a9619ce2b23ecab5a3c1746a9fc8d554203c80a01bb&w=600"
+                    class="!size-[60px] !rounded-full object-cover"
+                    alt="User"
+                    loading="lazy"
+                  />
+                </picture>
               </div>
               <p class="mt-2 font-normal text-[15px] dark:text-[#fff]">جين سميث</p>
             </div>
@@ -590,11 +640,38 @@
                 "منتج رائع سأستخدمه بالتأكيد مرة أخرى!"
               </p>
               <div class="mt-4 flex justify-center">
-                <img
-                  src="https://img.freepik.com/photos-gratuite/portrait-jeune-homme-beau-modele-souriant-vetu-vetements-gris-capuche-decontracte-posant-mur-blanc-isole_158538-6978.jpg?t=st=1739286741~exp=1739290341~hmac=fe790e7da5ff742ede8eb7338da6e8651e90f3ee3cbfeed5cf25390ebec9fd54&w=2000"
-                  alt="User"
-                  class="!size-[60px] !rounded-full object-cover"
-                />
+                <picture>
+                  <source
+                    srcset="
+                    https://img.freepik.com/photos-gratuite/portrait-jeune-homme-beau-modele-souriant-vetu-vetements-gris-capuche-decontracte-posant-mur-blanc-isole_158538-6978.jpg?t=st=1739286741~exp=1739290341~hmac=fe790e7da5ff742ede8eb7338da6e8651e90f3ee3cbfeed5cf25390ebec9fd54&w=900
+                    "
+                    media="(min-width: 1250px)"
+                  />
+                  <source
+                    srcset="
+                    https://img.freepik.com/photos-gratuite/portrait-jeune-homme-beau-modele-souriant-vetu-vetements-gris-capuche-decontracte-posant-mur-blanc-isole_158538-6978.jpg?t=st=1739286741~exp=1739290341~hmac=fe790e7da5ff742ede8eb7338da6e8651e90f3ee3cbfeed5cf25390ebec9fd54&w=800
+                    "
+                    media="(min-width: 950px)"
+                  />
+                  <source
+                    srcset="
+                    https://img.freepik.com/photos-gratuite/portrait-jeune-homme-beau-modele-souriant-vetu-vetements-gris-capuche-decontracte-posant-mur-blanc-isole_158538-6978.jpg?t=st=1739286741~exp=1739290341~hmac=fe790e7da5ff742ede8eb7338da6e8651e90f3ee3cbfeed5cf25390ebec9fd54&w=600
+                    "
+                    media="(min-width: 700px)"
+                  />
+                  <source
+                    srcset="
+                    https://img.freepik.com/photos-gratuite/portrait-jeune-homme-beau-modele-souriant-vetu-vetements-gris-capuche-decontracte-posant-mur-blanc-isole_158538-6978.jpg?t=st=1739286741~exp=1739290341~hmac=fe790e7da5ff742ede8eb7338da6e8651e90f3ee3cbfeed5cf25390ebec9fd54&w=400
+                    "
+                    media="(max-width: 699px)"
+                  />
+                  <img
+                    src="https://img.freepik.com/photos-gratuite/portrait-jeune-homme-beau-modele-souriant-vetu-vetements-gris-capuche-decontracte-posant-mur-blanc-isole_158538-6978.jpg?t=st=1739286741~exp=1739290341~hmac=fe790e7da5ff742ede8eb7338da6e8651e90f3ee3cbfeed5cf25390ebec9fd54&w=600"
+                    class="!size-[60px] !rounded-full object-cover"
+                    alt="User"
+                    loading="lazy"
+                  />
+                </picture>
               </div>
               <p class="mt-2 font-normal text-[15px] dark:text-[#fff]">أليكس براون</p>
             </div>
