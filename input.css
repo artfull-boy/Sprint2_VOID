@@ -6,19 +6,23 @@
 * {
   font-family: "DM Sans", serif;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 /* Design System */
 h1 {
   font-size: 58px;
   font-weight: bold;
   margin: 0;
 }
+
 h2 {
   font-size: 42px;
   font-weight: bold;
   line-height: 52px;
   margin: 0;
 }
+
 h3 {
   font-size: 22px;
   font-weight: medium;
@@ -26,104 +30,28 @@ h3 {
   margin: 0;
 }
 
-/* Carousel Content */
-.carousel-container {
-    position: relative;
-    margin: 0 auto;
-    overflow: hidden;
-    border-radius: 10px;
-  }
-  
-  .carousel-slide {
-    display: none;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    transition: opacity 0.5s ease-in-out;
-    opacity: 0;
-  }
-  
-  .carousel-slide.active {
-    display: block;
-    opacity: 1;
-  }
-  
-  .carousel-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-  }
-  
-  .carousel-btn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: #2F1893;
-      color: white;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      cursor: pointer;
-      border: none;
-      z-index: 1;
-  }
-  
-  @media (max-width: 768px) {
-    .carousel-btn {
-      width: 30px;
-      height: 30px;
-    }
-    
-  }
-  .prev {
-    left: 0;
-  }
-  
-  .next {
-    right: 0;
-  }
-  
-  .carousel-dots {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 10px;
-  }
-  
-  .dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.4);
-    cursor: pointer;
-  }
-  
-  .dot.active {
-    background: white;
-  }
-  .h-\[500px\] {
-    height: 500px;
-  }
-  .h-\[400px\] {
-    height: 400px;
-  }
-  .h-\[300px\] {
-    height: 300px;
-  }
-  .h-\[200px\] {
-    height: 200px;
-  }
-  
+.h-\[500px\] {
+  height: 500px;
+}
 
-  /* General Carousel Styling */
+.h-\[400px\] {
+  height: 400px;
+}
+
+.h-\[300px\] {
+  height: 300px;
+}
+
+.h-\[200px\] {
+  height: 200px;
+}
+
+
+/* General Carousel Styling */
 .carousel-container {
   position: relative;
   margin: 0 auto;
   overflow: hidden;
-  border-radius: 10px;
 }
 
 /* Carousel Slides */
@@ -134,20 +62,24 @@ h3 {
   position: absolute;
   transition: opacity 0.5s ease-in-out;
   opacity: 0;
+  direction: ltr;
 }
 
 .carousel-slide.active {
   display: block;
   opacity: 1;
 }
+
 .carousel-slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 10px;  
+  border-radius: 10px;
 }
+
 /* Navigation Buttons */
-.prev, .next {
+.prev,
+.next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -161,15 +93,25 @@ h3 {
   transition: background 0.3s;
 }
 
-.prev:hover, .next:hover {
+.prev:hover,
+.next:hover {
   background: rgba(0, 0, 0, 0.8);
 }
 
-.prev { left: 10px; }
-.next { right: 10px; }
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
 
 /* Dots Navigation */
 .carousel-dots {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
   text-align: center;
   padding: 10px 0;
 }
@@ -194,9 +136,25 @@ h3 {
   font-weight: bold;
 }
 
-/* Specific Styles for Picture Carousel */
 .carousel-pictures .carousel-slide img {
   width: 100%;
   height: auto;
   border-radius: 10px;
+}
+
+.animated-arrow {
+  animation-name: arrow;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes arrow {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
 }
