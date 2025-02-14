@@ -63,12 +63,14 @@
     <link rel="preload" href="./scripts/handleSubmit.js" as="script" />
     <link rel="preload" href="./scripts/handleDarkMode.js" as="script" />
     <link rel="preload" href="./scripts/handleTranslation.js" as="script" />
+    <link rel="preload" href="./scripts/scrollToTop.js" as="script" />
     <script src="./scripts/carousel.js" defer></script>
     <script src="./scripts/newsletter.js" defer></script>
     <script src="./scripts/handleShowMore.js" defer></script>
     <script src="./scripts/handleSubmit.js" defer></script>
     <script src="./scripts/handleDarkMode.js" defer></script>
     <script src="./scripts/handleTranslation.js" defer></script>
+    <script src="./scripts/scrollToTop.js" defer></script>
     <title>Sprint 2 - VOID</title>
   </head>
 
@@ -106,7 +108,6 @@
 
     <!-- Main Section -->
     <main>
-
       <!---Hero Section-->
       <section
         class="body-font bg-[#2F1893] min-xl:px-[315px] min-xl:py-[100px] min-md:px-[200px] min-md:py-[100px] min-sm:px-[100px] px-[30px] py-[70px] flex flex-col gap-[157px]"
@@ -121,10 +122,7 @@
         </div>
         <div class="flex gap-[24px] items-center">
           <picture>
-            <source
-              srcset="./images/Userpic.webp"
-              type="image/webp"
-            />
+            <source srcset="./images/Userpic.webp" type="image/webp" />
             <img
               src="./images/Userpic.png"
               alt="hero-image"
@@ -305,7 +303,7 @@
           </div>
           <button
             id="showMore"
-            class="h-[4opx] text-[#fff] bg-[#2F1893] w-fit mx-auto px-5 py-3 rounded-[10px] cursor-pointer transition-colors duration-500 ease-in-out hover:bg-black"
+            class="h-[4opx] text-[#fff] bg-[#2F1893] w-fit mx-auto px-5 py-3 rounded-[10px] cursor-pointer transition-colors duration-500 ease-in-out hover:bg-[#1E0E62]"
           >
             Show More
           </button>
@@ -315,7 +313,6 @@
       <!---Caroussel Pictures Section-->
       <section
         class="min-xl:px-[315px] pb-[100px] min-md:px-[200px] py-[70px] min-sm:px-[100px] px-[30px] flex flex-col gap-[60px] dark:bg-black carousel-container carousel-pictures"
-        dir="ltr"
       >
         <div
           class="relative w-full min-lg:h-[500px] max-md:h-[300px] max-lg:h-[400px]"
@@ -499,7 +496,8 @@
               type="email"
               id="email"
               name="email"
-              class="border-[1px] border-[#1E0E62] dark:border-[#ffffffb3] rounded-[5px] p-[10px] dark:bg-[#1E1E1E] dark:text-white" autocomplete="email"
+              class="border-[1px] border-[#1E0E62] dark:border-[#ffffffb3] rounded-[5px] p-[10px] dark:bg-[#1E1E1E] dark:text-white"
+              autocomplete="email"
             />
             <p class="text-red-600 text-[12px] hidden" id="error3">
               Email is required
@@ -516,7 +514,7 @@
               id="message"
               rows="4"
               name="message"
-              class="border-[1px] border-[#1E0E62] dark:border-[#ffffffb3] rounded-[5px] p-[10px] dark:bg-[#1E1E1E] dark:text-white"
+              class="border-[1px] border-[#1E0E62] dark:border-[#ffffffb3] rounded-[5px] p-[10px] dark:bg-[#1E1E1E] dark:text-white resize-none"
             ></textarea>
             <p class="text-red-600 text-[12px] hidden" id="error4">
               Message is required
@@ -535,11 +533,25 @@
         </form>
       </section>
 
+      <!-- Video Embedded -->
+      <section
+        class="min-xl:px-[315px] pb-[100px] min-md:px-[200px] py-[70px] min-sm:px-[100px] px-[30px] flex flex-col gap-[60px] dark:bg-black"
+      >
+        <iframe
+          src="https://www.youtube.com/embed/hmiNi7jDa-I"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="no-referrer"
+          allowfullscreen
+          class="w-full lg:h-[550px] h-[350px] object-cover"
+        ></iframe>
+      </section>
+
       <!-- Testimonials Carousel Section -->
       <section
         class="min-xl:px-[315px] pb-[100px] min-md:px-[200px] py-[70px] min-sm:px-[100px] px-[30px] flex flex-col gap-[60px] dark:bg-black carousel-container carousel-testimonials"
         id="TestimonialSection"
-        dir="ltr"
       >
         <div
           class="relative w-full min-lg:h-[500px] max-md:h-[300px] max-lg:h-[400px] overflow-hidden"
@@ -561,25 +573,25 @@
                 <picture>
                   <source
                     srcset="
-                    https://img.freepik.com/photos-gratuite/portrait-femme-blonde-souriante_23-2148316635.jpg?t=st=1739286679~exp=1739290279~hmac=088487730bf7b37cd11fb93c147569e136e0c8b5312ac34a91d992b8ebf10719&w=900
+                      https://img.freepik.com/photos-gratuite/portrait-femme-blonde-souriante_23-2148316635.jpg?t=st=1739286679~exp=1739290279~hmac=088487730bf7b37cd11fb93c147569e136e0c8b5312ac34a91d992b8ebf10719&w=900
                     "
                     media="(min-width: 1250px)"
                   />
                   <source
                     srcset="
-                    https://img.freepik.com/photos-gratuite/portrait-femme-blonde-souriante_23-2148316635.jpg?t=st=1739286679~exp=1739290279~hmac=088487730bf7b37cd11fb93c147569e136e0c8b5312ac34a91d992b8ebf10719&w=800
+                      https://img.freepik.com/photos-gratuite/portrait-femme-blonde-souriante_23-2148316635.jpg?t=st=1739286679~exp=1739290279~hmac=088487730bf7b37cd11fb93c147569e136e0c8b5312ac34a91d992b8ebf10719&w=800
                     "
                     media="(min-width: 950px)"
                   />
                   <source
                     srcset="
-                    https://img.freepik.com/photos-gratuite/portrait-femme-blonde-souriante_23-2148316635.jpg?t=st=1739286679~exp=1739290279~hmac=088487730bf7b37cd11fb93c147569e136e0c8b5312ac34a91d992b8ebf10719&w=600
+                      https://img.freepik.com/photos-gratuite/portrait-femme-blonde-souriante_23-2148316635.jpg?t=st=1739286679~exp=1739290279~hmac=088487730bf7b37cd11fb93c147569e136e0c8b5312ac34a91d992b8ebf10719&w=600
                     "
                     media="(min-width: 700px)"
                   />
                   <source
                     srcset="
-                    https://img.freepik.com/photos-gratuite/portrait-femme-blonde-souriante_23-2148316635.jpg?t=st=1739286679~exp=1739290279~hmac=088487730bf7b37cd11fb93c147569e136e0c8b5312ac34a91d992b8ebf10719&w=400
+                      https://img.freepik.com/photos-gratuite/portrait-femme-blonde-souriante_23-2148316635.jpg?t=st=1739286679~exp=1739290279~hmac=088487730bf7b37cd11fb93c147569e136e0c8b5312ac34a91d992b8ebf10719&w=400
                     "
                     media="(max-width: 699px)"
                   />
@@ -609,25 +621,25 @@
                 <picture>
                   <source
                     srcset="
-                    https://img.freepik.com/photos-gratuite/tour-taille-jeune-femme-europeenne-attrayante-positive-employee-etudiant-portant-du-rouge-levres-lunettes-ovales-souriant-confiance-gardant-bras-croises-posant-isole_344912-548.jpg?t=st=1739286712~exp=1739290312~hmac=addfa96cabcafb23c59e8a9619ce2b23ecab5a3c1746a9fc8d554203c80a01bb&w=900
+                      https://img.freepik.com/photos-gratuite/tour-taille-jeune-femme-europeenne-attrayante-positive-employee-etudiant-portant-du-rouge-levres-lunettes-ovales-souriant-confiance-gardant-bras-croises-posant-isole_344912-548.jpg?t=st=1739286712~exp=1739290312~hmac=addfa96cabcafb23c59e8a9619ce2b23ecab5a3c1746a9fc8d554203c80a01bb&w=900
                     "
                     media="(min-width: 1250px)"
                   />
                   <source
                     srcset="
-                    https://img.freepik.com/photos-gratuite/tour-taille-jeune-femme-europeenne-attrayante-positive-employee-etudiant-portant-du-rouge-levres-lunettes-ovales-souriant-confiance-gardant-bras-croises-posant-isole_344912-548.jpg?t=st=1739286712~exp=1739290312~hmac=addfa96cabcafb23c59e8a9619ce2b23ecab5a3c1746a9fc8d554203c80a01bb&w=800
+                      https://img.freepik.com/photos-gratuite/tour-taille-jeune-femme-europeenne-attrayante-positive-employee-etudiant-portant-du-rouge-levres-lunettes-ovales-souriant-confiance-gardant-bras-croises-posant-isole_344912-548.jpg?t=st=1739286712~exp=1739290312~hmac=addfa96cabcafb23c59e8a9619ce2b23ecab5a3c1746a9fc8d554203c80a01bb&w=800
                     "
                     media="(min-width: 950px)"
                   />
                   <source
                     srcset="
-                    https://img.freepik.com/photos-gratuite/tour-taille-jeune-femme-europeenne-attrayante-positive-employee-etudiant-portant-du-rouge-levres-lunettes-ovales-souriant-confiance-gardant-bras-croises-posant-isole_344912-548.jpg?t=st=1739286712~exp=1739290312~hmac=addfa96cabcafb23c59e8a9619ce2b23ecab5a3c1746a9fc8d554203c80a01bb&w=600
+                      https://img.freepik.com/photos-gratuite/tour-taille-jeune-femme-europeenne-attrayante-positive-employee-etudiant-portant-du-rouge-levres-lunettes-ovales-souriant-confiance-gardant-bras-croises-posant-isole_344912-548.jpg?t=st=1739286712~exp=1739290312~hmac=addfa96cabcafb23c59e8a9619ce2b23ecab5a3c1746a9fc8d554203c80a01bb&w=600
                     "
                     media="(min-width: 700px)"
                   />
                   <source
                     srcset="
-                    https://img.freepik.com/photos-gratuite/tour-taille-jeune-femme-europeenne-attrayante-positive-employee-etudiant-portant-du-rouge-levres-lunettes-ovales-souriant-confiance-gardant-bras-croises-posant-isole_344912-548.jpg?t=st=1739286712~exp=1739290312~hmac=addfa96cabcafb23c59e8a9619ce2b23ecab5a3c1746a9fc8d554203c80a01bb&w=400
+                      https://img.freepik.com/photos-gratuite/tour-taille-jeune-femme-europeenne-attrayante-positive-employee-etudiant-portant-du-rouge-levres-lunettes-ovales-souriant-confiance-gardant-bras-croises-posant-isole_344912-548.jpg?t=st=1739286712~exp=1739290312~hmac=addfa96cabcafb23c59e8a9619ce2b23ecab5a3c1746a9fc8d554203c80a01bb&w=400
                     "
                     media="(max-width: 699px)"
                   />
@@ -657,25 +669,25 @@
                 <picture>
                   <source
                     srcset="
-                    https://img.freepik.com/photos-gratuite/portrait-jeune-homme-beau-modele-souriant-vetu-vetements-gris-capuche-decontracte-posant-mur-blanc-isole_158538-6978.jpg?t=st=1739286741~exp=1739290341~hmac=fe790e7da5ff742ede8eb7338da6e8651e90f3ee3cbfeed5cf25390ebec9fd54&w=900
+                      https://img.freepik.com/photos-gratuite/portrait-jeune-homme-beau-modele-souriant-vetu-vetements-gris-capuche-decontracte-posant-mur-blanc-isole_158538-6978.jpg?t=st=1739286741~exp=1739290341~hmac=fe790e7da5ff742ede8eb7338da6e8651e90f3ee3cbfeed5cf25390ebec9fd54&w=900
                     "
                     media="(min-width: 1250px)"
                   />
                   <source
                     srcset="
-                    https://img.freepik.com/photos-gratuite/portrait-jeune-homme-beau-modele-souriant-vetu-vetements-gris-capuche-decontracte-posant-mur-blanc-isole_158538-6978.jpg?t=st=1739286741~exp=1739290341~hmac=fe790e7da5ff742ede8eb7338da6e8651e90f3ee3cbfeed5cf25390ebec9fd54&w=800
+                      https://img.freepik.com/photos-gratuite/portrait-jeune-homme-beau-modele-souriant-vetu-vetements-gris-capuche-decontracte-posant-mur-blanc-isole_158538-6978.jpg?t=st=1739286741~exp=1739290341~hmac=fe790e7da5ff742ede8eb7338da6e8651e90f3ee3cbfeed5cf25390ebec9fd54&w=800
                     "
                     media="(min-width: 950px)"
                   />
                   <source
                     srcset="
-                    https://img.freepik.com/photos-gratuite/portrait-jeune-homme-beau-modele-souriant-vetu-vetements-gris-capuche-decontracte-posant-mur-blanc-isole_158538-6978.jpg?t=st=1739286741~exp=1739290341~hmac=fe790e7da5ff742ede8eb7338da6e8651e90f3ee3cbfeed5cf25390ebec9fd54&w=600
+                      https://img.freepik.com/photos-gratuite/portrait-jeune-homme-beau-modele-souriant-vetu-vetements-gris-capuche-decontracte-posant-mur-blanc-isole_158538-6978.jpg?t=st=1739286741~exp=1739290341~hmac=fe790e7da5ff742ede8eb7338da6e8651e90f3ee3cbfeed5cf25390ebec9fd54&w=600
                     "
                     media="(min-width: 700px)"
                   />
                   <source
                     srcset="
-                    https://img.freepik.com/photos-gratuite/portrait-jeune-homme-beau-modele-souriant-vetu-vetements-gris-capuche-decontracte-posant-mur-blanc-isole_158538-6978.jpg?t=st=1739286741~exp=1739290341~hmac=fe790e7da5ff742ede8eb7338da6e8651e90f3ee3cbfeed5cf25390ebec9fd54&w=400
+                      https://img.freepik.com/photos-gratuite/portrait-jeune-homme-beau-modele-souriant-vetu-vetements-gris-capuche-decontracte-posant-mur-blanc-isole_158538-6978.jpg?t=st=1739286741~exp=1739290341~hmac=fe790e7da5ff742ede8eb7338da6e8651e90f3ee3cbfeed5cf25390ebec9fd54&w=400
                     "
                     media="(max-width: 699px)"
                   />
@@ -697,6 +709,17 @@
           <button class="next">❯</button>
         </div>
       </section>
+
+      <!-- Scroll to Top Animation -->
+      <div
+        class="flex justify-center items-center bg-blue-100 size-14 rounded-full shadow-2xl fixed bottom-3.5 right-4.5 cursor-pointer"
+        id="scrollButton"
+      >
+        <i
+          class="fa fa-arrow-up fa-lg text-[#2F1893] animated-arrow"
+          aria-hidden="true"
+        ></i>
+      </div>
     </main>
   </body>
-  </html>
+</html>
