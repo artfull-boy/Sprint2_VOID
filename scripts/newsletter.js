@@ -32,10 +32,10 @@ NewsletterFormInput.setAttribute('required', '');
 NewsletterFormButton.setAttribute('type', 'submit');
 
 // Add Text Content to Elements
-NewsletterTitle.textContent = window.location.href.includes("index.html") ? 'Subscribe to our Newsletter' : 'اشترك في نشرتنا الإخبارية';
-NewsletterDescription.textContent = window.location.href.includes("index.html") ? 'Stay updated with the latest news and special offers.' : 'ابق على اطلاع بآخر الأخبار والعروض الخاصة.';
-NewsletterFormLabel.textContent = window.location.href.includes("index.html") ? 'Email' : 'لبريد الإلكتروني';
-NewsletterFormButton.textContent = window.location.href.includes("index.html") ? 'Subscribe' : 'اشترك';
+NewsletterTitle.textContent = (window.location.href.includes("index.html") || window.location.pathname == "/") ? 'Subscribe to our Newsletter' : 'اشترك في نشرتنا الإخبارية';
+NewsletterDescription.textContent = (window.location.href.includes("index.html") || window.location.pathname == "/") ? 'Stay updated with the latest news and special offers.' : 'ابق على اطلاع بآخر الأخبار والعروض الخاصة.';
+NewsletterFormLabel.textContent = (window.location.href.includes("index.html") || window.location.pathname == "/") ? 'Email' : 'لبريد الإلكتروني';
+NewsletterFormButton.textContent = (window.location.href.includes("index.html") || window.location.pathname == "/") ? 'Subscribe' : 'اشترك';
 
 // Append Elements to Parent Element
 NewsletterContent.appendChild(NewsletterTitle);
