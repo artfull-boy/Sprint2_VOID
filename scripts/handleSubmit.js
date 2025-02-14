@@ -5,6 +5,7 @@ const formInputFields = {
   message: document.getElementById('message'),
 }
 const successMessage = document.getElementById('successMessage');
+const btn = document.getElementById('button');
 
 const validateInput = (input) => {
   if (input.value === '') {
@@ -12,11 +13,24 @@ const validateInput = (input) => {
     input.nextElementSibling.classList.remove('hidden');
     return false;
   } else {
+    if (input.getAttribute('type') === 'email') {
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(input.value)) {
+        input.classList.add('border-red-500');
+        input.nextElementSibling.classList.remove('hidden');
+        return false;
+      }
+    }
     input.classList.remove('border-red-500');
     input.nextElementSibling.classList.add('hidden');
     return true;
   }
 };
+
+for (const input in formInputFields) {
+  formInputFields[input].addEventListener('input', () => validateInput(formInputFields[input]));
+  formInputFields[input].addEventListener('blur', () => validateInput(formInputFields[input]));
+}
 
 const clearInputs = () => {
   formInputFields.firstName.value = '';
@@ -40,10 +54,18 @@ const handleSubmit = (e) => {
     console.log('Message:', formInputFields.message.value);
 
     clearInputs();
+    btn.classList.add("bg-green-500");
     successMessage.classList.remove('hidden');
     setTimeout(() => {
+    btn.classList.remove("bg-green-500");
       successMessage.classList.add('hidden');
     }, 3000);
+  }
+  else {
+    btn.classList.add('bg-[#ff0033]','hover:bg-[#ff0033]');
+    setTimeout(() => {
+      btn.classList.remove('bg-[#ff0033]', 'hover:bg-[#ff0033]');
+    }, 2000);
   }
 };
 
