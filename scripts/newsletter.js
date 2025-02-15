@@ -32,10 +32,10 @@ NewsletterFormInput.setAttribute('required', '');
 NewsletterFormButton.setAttribute('type', 'submit');
 
 // Add Text Content to Elements
-NewsletterTitle.textContent = (window.location.href.includes("index.html") || window.location.pathname == "/") ? 'Subscribe to our Newsletter' : 'اشترك في نشرتنا الإخبارية';
-NewsletterDescription.textContent = (window.location.href.includes("index.html") || window.location.pathname == "/") ? 'Stay updated with the latest news and special offers.' : 'ابق على اطلاع بآخر الأخبار والعروض الخاصة.';
-NewsletterFormLabel.textContent = (window.location.href.includes("index.html") || window.location.pathname == "/") ? 'Email' : 'لبريد الإلكتروني';
-NewsletterFormButton.textContent = (window.location.href.includes("index.html") || window.location.pathname == "/") ? 'Subscribe' : 'اشترك';
+NewsletterTitle.textContent = dict[detectLanguage()]['Newsletter'];
+NewsletterDescription.textContent = dict[detectLanguage()]['stayUpdated'];
+NewsletterFormLabel.textContent = dict[detectLanguage()]['Email'];
+NewsletterFormButton.textContent = dict[detectLanguage()]['Subscribe'];
 
 // Append Elements to Parent Element
 NewsletterContent.appendChild(NewsletterTitle);

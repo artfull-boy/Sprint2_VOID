@@ -64,6 +64,16 @@
     <link rel="preload" href="./scripts/handleDarkMode.js" as="script" />
     <link rel="preload" href="./scripts/handleTranslation.js" as="script" />
     <link rel="preload" href="./scripts/scrollToTop.js" as="script" />
+    <link rel="preload" href="./scripts/globalDict.js" as="script" />
+    <script src="./scripts/globalDict.js" defer></script>
+    <script>
+      const detectLanguage = () => {
+        return window.location.href.includes("index.html") ||
+          window.location.pathname == "/"
+          ? "en"
+          : "ar";
+      };
+    </script>
     <script src="./scripts/carousel.js" defer></script>
     <script src="./scripts/newsletter.js" defer></script>
     <script src="./scripts/handleShowMore.js" defer></script>
@@ -71,6 +81,7 @@
     <script src="./scripts/handleDarkMode.js" defer></script>
     <script src="./scripts/handleTranslation.js" defer></script>
     <script src="./scripts/scrollToTop.js" defer></script>
+
     <title>Sprint 2 - VOID</title>
   </head>
 
@@ -81,7 +92,7 @@
       <nav
         class="flex justify-between items-center min-xl:px-[315px] min-md:px-[200px] py-3 min-sm:px-[100px] px-[30px] bg-[#2F1893]"
       >
-        <p id="navbar-title" class="text-white font-bold text-xl">VOID</p>
+        <a href="#" id="navbar-title" class="text-white font-bold text-xl">VOID</a>
         <div class="flex gap-[20px] text-white items-center">
           <a
             id="ar"

@@ -4,11 +4,12 @@ const showMore = document.getElementById('showMore');
 const handleShowMore = () => {
   if (additional_Content.classList.contains('hidden')) {
     additional_Content.classList.remove('hidden');
-    (window.location.href.includes("index.html") || window.location.pathname=="/") ? showMore.innerHTML = 'Show Less' : showMore.innerHTML = 'أظهر أقل';
+    showMore.innerHTML =  dict[detectLanguage()].showLess;
   }
   else {
     additional_Content.classList.add('hidden');
-    (window.location.href.includes("index.html") || window.location.pathname=="/") ? showMore.innerHTML = 'Show More' : showMore.innerHTML = 'أظهر المزيد';
+    showMore.innerHTML =  dict[detectLanguage()].showMore;
   }
 }
 showMore.addEventListener('click', handleShowMore);
+
